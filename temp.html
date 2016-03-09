@@ -1,205 +1,1985 @@
-<html><head><meta name=keywords content="HDOJ ACM ICPC OJ C C++ Pascal Java"><meta http-equiv=Content-Type content="text/html;charset=gb2312"><link rel=stylesheet type=text/css href="/images/global.css" media=all><link rel=stylesheet type=text/css href="/css/diyinhead.css" media=all><link rel=stylesheet type=text/css href="/css/webinhead.css" media=all><script src="/js/global.js" type=text/javascript></script><script src="/js/register.js" type=text/javascript></script><script src="/js/MathJax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><title>Discuss Board</title></head><body >
-<a name=top></a>
-<table align=center cellSpacing=0 cellPadding=0 width=980 border=0 style="word-wrap:break-word">
-<tr>
-	<td style="border:#1A5CC8 1px solid" align=center width=100%>
-		<a href="/">
-			<img src="/images/banner.jpg" width="100%" height=116 border=0>
-		</a>
-	</td>
-</tr>
-<tr>
-	<td style="border:#1A5CC8 1px solid">
-	<table cellSpacing=0 cellPadding=1 width="979px">
-	<tr bgcolor=#1A5CC8 align=center class=banner height=25>
-		<td>Online Judge</td>
-		<td>Online Exercise</td>
-		<td>Online Teaching</td>
-		<td>Online Contests</td>
-	<td>Exercise Author</td>
-	</tr>
-	<tr style="font-size:16px" align=center>
-		<td width=20% valign=top>
-		<a href="/faq.php" style="text-decoration: none">F.A.Q</a><br>
-		<a href="/friends" style="text-decoration: none">Hand In Hand</a><br>
-		<a href="/onlineuser.php" style="text-decoration: none">Online Acmers</a>	<br>
-		<!-- /onlineuser.php-->
-		
-		<a href="/forum" style="text-decoration: none">Forum | </a><a href="/discuss/public/list.php" style="text-decoration: none">Discuss</a><br>
-		<a href="/statistic/submit_graph.php" style="text-decoration: none">Statistical Charts</a><br>
-		</td>
-		<td width=20% valign=top>
-		<form action="/search.php" method=get>
-		<a href="/listproblem.php?vol=1" style="text-decoration: none">Problem Archive</a><br/>
-		<!--<a href="http://feeds.feedburner.com/Hdoj-problemset"><img src="/images/rss1.jpg" alt="problemset" style="vertical-align:text-bottom;"width=20 height=20></a><br>-->
-		<!--
-			 <a href="/submit.php">Submit Solution</a><br>
-		-->	
-		<a href="/status.php" style="text-decoration: none">Realtime Judge Status</a><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+     
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>   
+    
+     
+    <script type="text/javascript" src="http://c.csdnimg.cn/pubfooter/js/tracking.js" charset="utf-8"></script>  
 
-		<a href="/ranklist.php" style="text-decoration: none">Authors Ranklist</a><br>
-		<input name=field value=author type=hidden><input class=text60 name=key>&nbsp;<input class=button40 type=submit value=Search>
-		
-		<!--
-			<input name=field value=problem type=hidden><input class=text60 name=key>&nbsp;<input class=button40 type=submit value=Search>
-		-->
-		</form>
-		</td>
-		<td width=20% valign=top>
-		 <form action='/search.php' method=get> 
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none" href="http://code.hdu.edu.cn/">C/C++/Java Exams &nbsp;&nbsp;&nbsp;&nbsp;</a><br/>
-		<a style="text-decoration: none" href="/game">ACM Steps</a><br/>
-		<a href = "/ITJobs/">Go to Job</a><br/>	
-		<a href="/livecast" style="text-decoration: none">Contest LiveCast</a><br/>
-		<a style="text-decoration: none" href="/region">ICPC@China</a><br/>
-		<!-- <a href="/register.php">Register New Author</a><br> -->
-		<!-- <a href="/modifyuser.php">Update Your Information</a><br> -->
-		</form>
-		</td>
-		<td width=20% valign=top>
-		<a href="http://bestcoder.hdu.edu.cn" style="text-decoration: none; color: red; font-weight: bold;">Best Coder <sup style="color: gray;">beta</sup></a><br/><a href="/vip/contest_list.php" style="text-decoration: none">VIP</a> | <a href="/contests/contest_list.php" style="text-decoration: none">STD Contests</a><br /><a href="http://code.hdu.edu.cn/vcontest" style="text-decoration: none">Virtual Contests </a><br/>&nbsp;&nbsp;<a href="/diy/contest_list.php" style="text-decoration: none">&nbsp;&nbsp;DIY | </a><a href="/webcontest" style="text-decoration: none"><font color="">Web-DIY</font> <font size=1 color="gray"><sup>beta</sup></font></a><br/><a style="text-decoration: none" href="/recentcontest">Recent Contests</a><br/>		</td>
-		<td width=20%>
-		<div align=left style="font-size:16px;width:150px"><a href="/userstatus.php?user=RunnerUp" style="text-decoration: none"><img alt="Author" src="/images/user.png" border=0 height=18 width=18> RunnerUp</a><br><b style="font-family:Arial;font-size:16px"><a href="/listmsg.php" style="text-decoration: none"><img alt="Mail" src="/images/mail.png" border=0 height=18 width=18> Mail 0</a><a href="/listmsg.php?type=new" style="text-decoration: none">(<font color=red>0</font>)</a></b><br><a href="/control_panel.php" style="text-decoration: none"><img src="/images/panel.jpg" alt="Control Panel" border=0 height=18 width=18> Control Panel </a><br><a href="/userloginex.php?action=logout" style="text-decoration: none"><img src="/images/signout.png" alt="Sign Out" border=0 height=18 width=18> Sign Out</a></div>		</td>
-	</tr>
-	</table>
-	</td>
-</tr>
-<tr>
-	<td>
-		<div align=center id=rollword><marquee scrollamount=2 width=600 scrolldelay=30 onMouseOver="javascript:this.stop();" onMouseOut="javascript:this.start();"><b style="margin-right:20px"><a href="http://zhaosheng.hdu.edu.cn/art.php?aid=1074" style="color:orange" target=_blank>ÕÐÉú¡ª¡ªº¼µç¡°ÈýÎ»Ò»Ìå¡±È«¹¥ÂÔ£¡</a>
+    <script type="text/javascript">
+        var protocol = window.location.protocol;
+        document.write('<script type="text/javascript" src="' + protocol + '//csdnimg.cn/pubfooter/js/repoAddr2.js?v=' + Math.random() + '"></' + 'script>');
+    </script>
 
-<Br>
+  
+ <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+
+    <title>hdu题目分类 - SmarterYu的专栏
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Timer库概述timer是一个很小的库，提供简易的度量时间和进度显示功能，可以用于性能测试等需要计时的任务，对于大多数的情况它足够用。 timer库包含三个组件，分别是：计时器类timer，progress_timer和进度提示类progress_display，以下将分别详述。timertimer类可以测量时间的流逝，是一个小型的计时器，提供毫秒级别的计时进度和操作函数，供" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+        <!--new top-->
+               <link rel="stylesheet" href="http://c.csdnimg.cn/public/common/toolbar/css/index.css">        <!--new top-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/ink/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/SmarterYu/rss/list" />
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
 
 
-<a href="http://acm.hdu.edu.cn/ITJobs/index.php" style="color:red" target=_blank>ÕÐÆ¸¡ª¡ª°Í¿¨Ë¹¿Æ¼¼£¨º¼ÖÝ£©¡¢Ó¢ÐÛ»¥Óé£¨º¼ÖÝ£©</a>
+</head>
+<body>
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://c.csdnimg.cn/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/smarteryu">SmarterYu的专栏</a></h2>
+            <h3>如发现错误的代码或者您不认同的观点，请您指正，谢谢~</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+            
+                <li id="btnContents"><a href="http://blog.csdn.net/smarteryu?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/smarteryu?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/smarteryu/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
 
-
-
-</b></marquee></div>	</td>
-</tr>
-<tr>
-	<td>
-		<link rel="stylesheet" type="text/css" href="../discuss.css" />
-		<script language="javascript" src="../discuss.js" ></script>	
-		<div id="dismain">
-			<div id="distitle"><h1>Problem 1236 Message</h1></div>		
-			<div id="dislist">
-				<div id="dissearch">
-				<form method="post" action="../search/result.php">
-					User ID: <input type="text" name="username" size="20"> 
-					Title: <input type="text" name="title" size="20">
-					<input type="submit" value="Go">
-				</form>
-				</div>
-				<div class="dispanel_title"></div>
-				<div class="dispanel_content">
-				<table align="left" width="100%" cellpadding="0px" cellspacing="0px" border="0" >
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><img id="img26634_1" onclick="treeNodeHidden('26634_1', '../images/')" src="../images//om.gif"><a href="./post/reply.php?postid=26634&messageid=1&deep=0">ACÁË100ÌâÁË£¬ÁôÏÂ´úÂë£¨cÓïÑÔ½á¹¹ÌåµÄ£©ºÍ²©¿ÍÍøÖ·</a>  <span class="spannumber">(1900)  </span>&nbsp;<a href="../../userstatus.php?user=Huatian"><font color="#001111"><b>Huatian</b></font></a>&nbsp;2016-01-15 12:59:03 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a><ul id="u26634_1" class="v"><li><a href="./post/reply.php?postid=26634&messageid=2&deep=1">Re:ACÁË100ÌâÁË£¬ÁôÏÂ´úÂë£¨cÓïÑÔ½á¹¹ÌåµÄ£©ºÍ²©¿ÍÍøÖ·</a>  <span class="spannumber">(1984)  </span>&nbsp;<a href="../../userstatus.php?user=LieYingZhiXin"><font color="#001111"><b>1qieyi</b></font></a>&nbsp;2016-02-16 16:12:08 </li><li><font color="red">Latest~!</font><a href="./post/reply.php?postid=26634&messageid=3&deep=1">Re:ACÁË100ÌâÁË£¬ÁôÏÂ´úÂë£¨cÓïÑÔ½á¹¹ÌåµÄ£©ºÍ²©¿ÍÍøÖ·</a>  <span class="spannumber">(57)  </span>&nbsp;<a href="../../userstatus.php?user=sunkuo123"><font color="#001111"><b>sunkuo123</b></font></a>&nbsp;2016-03-04 19:53:31 </li></ul></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><font color="red">Latest~!</font><a href="./post/reply.php?postid=27017&messageid=1&deep=0">Áô¸ö´úÂë</a>  <span class="spannumber">(1368)  </span>&nbsp;<a href="../../userstatus.php?user=dibeiyin"><font color="#001111"><b>beibei</b></font></a>&nbsp;2016-02-19 00:30:02 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><img id="img4556_1" onclick="treeNodeHidden('4556_1', '../images/')" src="../images//om.gif"><a href="./post/reply.php?postid=4556&messageid=1&deep=0">²âÊÔµÄÊý¾Ý¶¼¶Ô£¬ÎªÊ²Ã´Í¨²»¹ý°¡£¬Çë½Ì´óÉñ½Ì½ÌÓÐÊ²Ã´ÌØÊâµÄÊý¾ÝÂð</a>  <span class="spannumber">(1185)  </span>&nbsp;<a href="../../userstatus.php?user=591516842"><font color="#001111"><b>»Æê»</b></font></a>&nbsp;2011-11-16 23:49:45 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a><ul id="u4556_1" class="v"><li><img id="img4556_2" onclick="treeNodeHidden('4556_2', '../images/')" src="../images//om.gif"><a href="./post/reply.php?postid=4556&messageid=2&deep=1">Re:²âÊÔµÄÊý¾Ý¶¼¶Ô£¬ÎªÊ²Ã´Í¨²»¹ý°¡£¬Çë½Ì´óÉñ½Ì½ÌÓÐÊ²Ã´ÌØÊâµÄÊý¾ÝÂð</a>  <span class="spannumber">(1269)  </span>&nbsp;<a href="../../userstatus.php?user=tianxingjian1992"><font color="#001111"><b>tianxingjian1992</b></font></a>&nbsp;2013-03-24 16:40:01 <ul id="u4556_2" class="v"><li><a href="./post/reply.php?postid=4556&messageid=4&deep=2">Re:²âÊÔµÄÊý¾Ý¶¼¶Ô£¬ÎªÊ²Ã´Í¨²»¹ý°¡£¬Çë½Ì´óÉñ½Ì½ÌÓÐÊ²Ã´ÌØÊâµÄÊý¾ÝÂð</a>  <span class="spannumber">(0)  </span>&nbsp;<a href="../../userstatus.php?user=41272719940930231x"><font color="#001111"><b>kaka</b></font></a>&nbsp;2014-11-26 20:25:33 </li></ul></li><li><a href="./post/reply.php?postid=4556&messageid=3&deep=1">Re:²âÊÔµÄÊý¾Ý¶¼¶Ô£¬ÎªÊ²Ã´Í¨²»¹ý°¡£¬Çë½Ì´óÉñ½Ì½ÌÓÐÊ²Ã´ÌØÊâµÄÊý¾ÝÂð</a>  <span class="spannumber">(1269)  </span>&nbsp;<a href="../../userstatus.php?user=dfghjk"><font color="#001111"><b>go</b></font></a>&nbsp;2013-04-18 00:31:46 </li><li><font color="red">Latest~!</font><a href="./post/reply.php?postid=4556&messageid=5&deep=1">Re:²âÊÔµÄÊý¾Ý¶¼¶Ô£¬ÎªÊ²Ã´Í¨²»¹ý°¡£¬Çë½Ì´óÉñ½Ì½ÌÓÐÊ²Ã´ÌØÊâµÄÊý¾ÝÂð</a>  <span class="spannumber">(1269)  </span>&nbsp;<a href="../../userstatus.php?user=yp0413150238"><font color="#001111"><b>yp0413150238</b></font></a>&nbsp;2016-01-02 09:45:30 </li></ul></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><font color="red">Latest~!</font><a href="./post/reply.php?postid=25923&messageid=1&deep=0">ÖªµÀË¼Â·¾ÍºÃ</a>  <span class="spannumber">(1253)  </span>&nbsp;<a href="../../userstatus.php?user=nopro"><font color="#001111"><b>Óã¶ù</b></font></a>&nbsp;2015-11-22 13:07:22 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><font color="red">Latest~!</font><a href="./post/reply.php?postid=25516&messageid=1&deep=0">²»ÓÃ½á¹¹ÌåAC ÍÂÁË</a>  <span class="spannumber">(1242)  </span>&nbsp;<a href="../../userstatus.php?user=1wy122791"><font color="#001111"><b>1wy122791</b></font></a>&nbsp;2015-10-29 14:39:59 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=24572&messageid=1&deep=0">²»¶®ÁËÂï</a>  <span class="spannumber">(1011)  </span>&nbsp;<a href="../../userstatus.php?user=yyd0325"><font color="#001111"><b>superman</b></font></a>&nbsp;2015-08-10 08:47:50 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=24536&messageid=1&deep=0">1236AC JAVAÖÕÓÚÌá½»³É¹¦ÁË£¬Ç×£¬¼ÇÄîÒ»ÏÂÏÂ</a>  <span class="spannumber">(2158)  </span>&nbsp;<a href="../../userstatus.php?user=1744061309"><font color="#001111"><b>´ó¿­</b></font></a>&nbsp;2015-08-08 15:03:58 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=23538&messageid=1&deep=0">¡£¡£Ë®</a>  <span class="spannumber">(689)  </span>&nbsp;<a href="../../userstatus.php?user=biubiu"><font color="#001111"><b>biubiu</b></font></a>&nbsp;2015-06-01 11:13:53 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=22765&messageid=1&deep=0">³¬Ê±ÊÇÒªÄÖÄÄÑù°¡¡£¡£¡£</a>  <span class="spannumber">(1253)  </span>&nbsp;<a href="../../userstatus.php?user=201400800498"><font color="#001111"><b>¼«Ò¹ ÓÀÉú</b></font></a>&nbsp;2015-04-11 14:07:08 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=22491&messageid=1&deep=0">É¸Ñ¡ÉÏÏßÈËÊýµÄÊ±ºòÓÐÎÊÌâ</a>  <span class="spannumber">(606)  </span>&nbsp;<a href="../../userstatus.php?user=201400800384"><font color="#001111"><b>Â½Á°Çå</b></font></a>&nbsp;2015-03-29 14:42:17 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><img id="img21944_1" onclick="treeNodeHidden('21944_1', '../images/')" src="../images//om.gif"><a href="./post/reply.php?postid=21944&messageid=1&deep=0">²ËÄñµÄ¼èÐÁACÂ·£¬µÚÒ»´ÎÐ´ÕâÃ´³¤µÄ´úÂë£¬Í¦ÀÛµÄ¡£</a>  <span class="spannumber">(1176)  </span>&nbsp;<a href="../../userstatus.php?user=ny2014_007"><font color="#001111"><b>°§Óë²»°§Ëü¶¼ÔÚÄÇÀï</b></font></a>&nbsp;2015-02-17 21:11:03 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a><ul id="u21944_1" class="v"><li><a href="./post/reply.php?postid=21944&messageid=2&deep=1">Re:²ËÄñµÄ¼èÐÁACÂ·£¬µÚÒ»´ÎÐ´ÕâÃ´³¤µÄ´úÂë£¬Í¦ÀÛµÄ¡£</a>  <span class="spannumber">(1260)  </span>&nbsp;<a href="../../userstatus.php?user=201400800354"><font color="#001111"><b>201400800354</b></font></a>&nbsp;2015-03-29 09:58:28 </li></ul></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=22222&messageid=1&deep=0">Ö±½ÓÓÃÐ¡ÓÚÌæ´ú×Ö·û´®±È½Ïº¯ÊýÒ²»áWA£¬±»¿ÓËÀ¡­¡­</a>  <span class="spannumber">(0)  </span>&nbsp;<a href="../../userstatus.php?user=csc1"><font color="#001111"><b>csc12</b></font></a>&nbsp;2015-03-10 20:42:25 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=22125&messageid=1&deep=0">ÓÅÏÈ¶ÓÁÐÀ²¡£</a>  <span class="spannumber">(815)  </span>&nbsp;<a href="../../userstatus.php?user=139074241"><font color="#001111"><b>ËÄº£Îª¼Ò¡£</b></font></a>&nbsp;2015-03-05 08:43:56 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=21881&messageid=1&deep=0">Õâ¸ö´úÂëÔÚ×Ô¼ºµçÄÔÉÏ¿ÉÒÔac£¬µ«ÔÚÌâ¿âÈ´´í£¬ÊÇÔõÃ´»ØÊÂ£¿</a>  <span class="spannumber">(1228)  </span>&nbsp;<a href="../../userstatus.php?user=nanxi"><font color="#001111"><b>ÄÏÙâ</b></font></a>&nbsp;2015-02-12 16:54:30 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li><hr></ul>							</td>
-						</tr>
-											<tr>
-							<td>
-								<ul id="ulframe" class="v"><li><a href="./post/reply.php?postid=21595&messageid=1&deep=0">ÂÔË®£¬×¢Òâ´Ó0¿ªÊ¼Ñ­»·µÄ»° ½â¾öµÄÎÊÌâÌâºÅÐèÒª¼õ1.</a>  <span class="spannumber">(862)  </span>&nbsp;<a href="../../userstatus.php?user=skymiange"><font color="#001111"><b>Íõ±òÐÇ</b></font></a>&nbsp;2015-01-28 10:39:52 <a href="../../showproblem.php?pid=1236"><font color="#000011"><b>Problem 1236</b></font></a></li></ul>							</td>
-						</tr>
-									</table>
-				
-				</div>
-				<div class="dispanel_bottom"></div>
-			</div>
-			<hr>
-			<div id="disbottom">
-				[<a href="./list.php?page=0&problemid=1236">Top</a>]   [<a href="./list.php?page=0&problemid=1236">Previous</a>]   [<a href="./list.php?page=1&problemid=1236">Next</a>]
-			</div>
-		</div>
-	</td>
-</tr>
-<tr>
-	<td align="left">
-	<form action="./post/new.php?problemid=1236" method="post">
-		<input type="submit" value="Post new message">
-	</form>
-	</td>
-</tr>
-<tr>
-	<td>
-		&nbsp;
-	</td>
-</tr>
-<tr>
-<td>
-	<table style="border:#1A5CC8 1px solid; font-size:14px" cellSpacing=0 cellPadding=1 width=100%>
-	<tr align=center>
-		<td class=footer_link height=45><a href="/">Home</a> | <a href=#top>Top</a></td>
-		<td style="padding:6px">
-			Hangzhou Dianzi University Online Judge 3.0<br>
-			Copyright &copy; 2005-2016 <a href=mailto:acm@hdu.edu.cn>HDU ACM Team</a>. All Rights Reserved.<br>
-			<a href="../about_us/developer.php">Designer & Developer </a>: <a>Wang Rongtao</a>&nbsp<a>LinLe</a>&nbsp<a href=mailto:gjavac@gmail.com >GaoJie</a>&nbsp<a href=mailto:gl8997@gmail.com >GanLu</a><br>
-			<span class=pagerunstatus>Total 0.000000(s) query 17, Server time : 2016-03-06 02:15:08, Gzip enabled</span>		</td>
-		<td class=footer_link>
-			<!-- <a href="javascript:history.go(-1);">Back</a> | <a href="javascript:history.forward();">Forward</a>-->
-			<a href="/admin">Administration</a>	
-		</td>
-	</tr>
-	</table>
-</td>
-</tr>
-</table>
+            </ul>
+    </div>
+</div>
 <script type="text/javascript">
-	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-	document.write(unescape("%3Cspan id='cnzz_stat_icon_1254072405'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254072405%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
-	document.getElementById('cnzz_stat_icon_1254072405').style.display = 'none';
+    var username = "SmarterYu";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/smarteryu";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
 </script>
-</body></html>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+<a href="http://blog.csdn.net/atlassian2013/article/details/50787107">
+<font color=red>Bitbucket 让 pull request变得更强大，可即刻提升团队代码质量
+</font></a>
+&nbsp;&nbsp;&nbsp;
+
+<a href="http://huiyi.csdn.net/activity/product/goods_list?project_id=2818">
+<font color=blue>云计算行业圆桌论坛
+</font></a>
+&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/csdnedu/article/details/50788201">
+<font color=red>前端精品课程免费看，写课评赢心动大礼！
+</font></a>
+</div>                        </div>
+                        
+
+
+
+<!--AdForward Begin:-->
+<script type="text/javascript" ads-src="http://csdnim.qtmojo.com/main/s?user=csdn|blog|fumeiti&db=csdnim&border=0&local=yes&js=ie" src="http://creatim.qtmojo.cn/td/AllyesDeliver.min.js" charset="gbk"></script>
+<!--AdForward End-->
+
+  
+<link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<script language='JavaScript' type='text/javascript' src='http://download.csdn.net/js/jquery.cookie.js'></script>
+<script type="text/javascript" src="http://c.csdnimg.cn/rabbit/search-service/main.js"></script>
+<link rel="stylesheet" href="http://static.blog.csdn.net/public/res-min/markdown_views.css?v=1.0" />
+<link rel="stylesheet" href="http://static.blog.csdn.net/css/category.css?v=1.0" />
+<script type="text/javascript" src="http://static.blog.csdn.net/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+
+ <script type="text/javascript" src="http://static.blog.csdn.net/scripts/web-storage-cache.min.js"></script>
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+           
+            var isBole = false;
+            
+          
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Repost"></span>
+
+
+    <h1>
+        <span class="link_title"><a href="/smarteryu/article/details/8130574">
+        <font color="red">[置顶]</font>
+        hdu题目分类            
+        </a></span>
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_r">
+            <span class="link_postdate">2012-10-30 22:42</span>
+            <span class="link_view" title="阅读次数">4083人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(0)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle('hdu题目分类','8130574');return false;" title="收藏">收藏</a></span>
+             <span class="link_report"> <a href="#report" onclick="javascript:report(8130574,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>
+    <div class="embody"  style="display:none" id="embody">
+        <span class="embody_t">本文章已收录于：</span>
+        <div class="embody_c" id="lib" value="{&quot;err&quot;:0,&quot;msg&quot;:&quot;ok&quot;,&quot;data&quot;:[]}"></div>
+    </div>
+    <style type="text/css">        
+            .embody{
+                padding:10px 10px 10px;
+                margin:0 -20px;
+                border-bottom:solid 1px #ededed;                
+            }
+            .embody_b{
+                margin:0 ;
+                padding:10px 0;
+            }
+            .embody .embody_t,.embody .embody_c{
+                display: inline-block;
+                margin-right:10px;
+            }
+            .embody_t{
+                font-size: 12px;
+                color:#999;
+            }
+            .embody_c{
+                font-size: 12px;
+            }
+            .embody_c img,.embody_c em{
+                display: inline-block;
+                vertical-align: middle;               
+            }
+             .embody_c img{               
+                width:30px;
+                height:30px;
+            }
+            .embody_c em{
+                margin: 0 20px 0 10px;
+                color:#333;
+                font-style: normal;
+            }
+    </style>
+    <script  type="text/javascript">
+        $(function () {
+            var lib = eval("("+$("#lib").attr("value")+")");
+            var html = "";
+            if (lib.err == 0) {
+                $.each(lib.data, function (i) {
+                    var obj = lib.data[i];
+                    //html += '<img src="' + obj.logo + '"/>' + obj.name + "&nbsp;&nbsp;";
+                    html += ' <a href="' + obj.url + '" target="_blank">';
+                    html += ' <img src="' + obj.logo + '">';
+                    html += ' <em><b>' + obj.name + '</b></em>';
+                    html += ' </a>';
+                });
+                if (html != "") {
+                    setTimeout(function () {
+                        $("#lib").html(html);
+                        /*
+                        var testhtml = "";
+                        testhtml += '<a href="#">';
+                        testhtml += '<img src="http://img.knowledge.csdn.net/upload/base/1455589744328_328.jpg">';
+                        testhtml += '<em>Android知识库</em>';
+                        testhtml += '</a>';
+                        $(".embody_c").html(testhtml);
+                        */
+                        $("#embody").show();
+                    }, 100);
+                }
+            }          
+            
+        });
+    </script>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="http://static.blog.csdn.net/images/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label  onclick="GetCategoryArticles('1269590','SmarterYu','top','8130574');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">参考转载<em>（11）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/SmarterYu/article/category/1269590"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_1269590">                            
+                            </ul>
+                        </div>
+                    </label>                    
+        </div>
+    </div>
+    <script   type="text/javascript" src="http://static.blog.csdn.net/scripts/category.js"></script>  
+
+  
+
+  
+  
+     
+
+<div id="article_content" class="article_content">
+
+<span style="color:rgb(54,46,43); font-family:Arial,Console,Verdana,'Courier New'"></span>
+<div class="article_title" style="display:block; margin-top:5px; margin-right:0px; margin-bottom:5px; margin-left:0px; color:rgb(0,0,0); font:normal normal normal 20px/30px 'Microsoft YaHei'">
+<h3 style="margin-top:0px; margin-right:0px; margin-bottom:0px; margin-left:0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; display:inline; font:normal normal normal 20px/30px 'Microsoft YaHei'; vertical-align:middle">
+<span class="link_title"><a href="http://blog.csdn.net/hechenghai/article/details/6863892" style="color:rgb(0,0,0); text-decoration:none">&nbsp;hdu题目分类</a></span></h3>
+</div>
+<div class="article_manage" style="padding-top:5px; padding-right:0px; padding-bottom:5px; padding-left:0px; color:rgb(153,153,153); font:normal normal normal 12px/24px Arial; text-align:right">
+<span class="link_postdate" style="margin-top:0px; margin-right:5px; margin-bottom:0px; margin-left:0px">2011-10-11 23:32</span>&nbsp;<span class="link_view" title="阅读次数" style="margin-top:0px; margin-right:5px; margin-bottom:0px; margin-left:5px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:14px; background-color:initial">172人阅读</span>&nbsp;<span class="link_comments" title="评论次数" style="margin-top:0px; margin-right:5px; margin-bottom:0px; margin-left:5px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:14px; background-color:initial"><a href="http://blog.csdn.net/hechenghai/article/details/6863892#comments" style="color:rgb(106,57,6); text-decoration:none">评论</a>(0)</span>&nbsp;<span class="link_collect" style="margin-top:0px; margin-right:5px; margin-bottom:0px; margin-left:5px"><a href="http://blog.csdn.net/hechenghai/article/details/6863892" title="收藏" style="color:rgb(106,57,6); text-decoration:none">收藏</a></span>&nbsp;<span class="link_report" style="margin-top:0px; margin-right:5px; margin-bottom:0px; margin-left:5px"><a href="http://blog.csdn.net/hechenghai/article/details/6863892#report" title="举报" style="color:rgb(106,57,6); text-decoration:none">举报</a></span></div>
+<div id="article_content" class="article_content" style="margin-top:20px; margin-right:0px; margin-bottom:0px; margin-left:0px; font-family:'Courier New',Console,Verdana,微软雅黑; font:normal normal normal 14px/26px Arial">
+<p>转载地址： &nbsp;&nbsp;<a href="http://blog.sina.com.cn/s/blog_6189fc310100uodn.html" style="color:rgb(106,57,6); text-decoration:none">http://blog.sina.com.cn/s/blog_6189fc310100uodn.html</a></p>
+<p>hdu 分类题集 (2011-07-21 22:32:42)转载<br>
+标签： hdu acm 题集分类 it<span style="white-space:pre"> </span>分类： acm<br>
+1001 整数求和 水题<br>
+1002 C语言实验题——两个数比较 水题<br>
+1003 1、2、3、4、5... 简单题<br>
+1004 渊子赛马 排序&#43;贪心的方法归并<br>
+1005 Hero In Maze 广度搜索<br>
+1006 Redraiment猜想 数论：容斥定理<br>
+1007 童年生活二三事 递推题<br>
+1008 University 简单hash<br>
+1009 目标柏林 简单模拟题<br>
+1010 Rails 模拟题（堆栈）<br>
+1011 Box of Bricks 简单题<br>
+1012 IMMEDIATE DECODABILITY Huffman编码<br>
+1013 STAMPS 搜索or动态规划<br>
+1014 Border 模拟题<br>
+1015 Simple Arithmetics 高精度计算<br>
+1016 Shoot-out 博弈&#43;状态压缩DP<br>
+1017 Tour Guide<br>
+1018 Card Trick 简单题<br>
+1019 Necklace Decomposition 贪心<br>
+1020 Crashing Robots 模拟题<br>
+1021 Electrical Outlets 简单题<br>
+1022 Watchdog 简单题<br>
+1023 Taxi Cab Scheme 图论：最小路径覆盖---&gt;最大二分匹配<br>
+1024 Pseudo-random Numbers 数论<br>
+1025 Card Game Cheater 简单题<br>
+1026 Investment 动态规划<br>
+1027 Pipes<br>
+1028 SETI 数学:高斯消元法<br>
+1029 Minimax Triangulation 计算几何<br>
+1030 Unequalled Consumption 母函数<br>
+1031 Declaration of Content<br>
+1032 Laserbox 搜索：DFS<br>
+1033 Bowlstack<br>
+1034 Pesky Heroes<br>
+1035 Reduced ID Numbers 暴力<br>
+1036 Tantrix<br>
+1037 Guardian of Decency 图论：匈牙利算法求二分图的最大匹配<br>
+1038 Up the Stairs 简单数学题<br>
+1039 Sudoku 搜索：DFS<br>
+1040 The SetStack Computer<br>
+1041 Pie 二分法<br>
+1042 Ticket to Ride 动态规划<br>
+1043 The Bookcase 动态规划<br>
+1044 Printer Queue 模拟题<br>
+1045 Prime Path 搜索：BFS<br>
+1046 Lineland's Airport<br>
+1047 Leonardo's Notebook 数学题：群置换<br>
+1048 简易版最长序列 简单题<br>
+1049 Jesse's problem 搜索：DFS<br>
+1050 Error Correction 模拟题<br>
+1051 A × B problem 高精度计算<br>
+1052 Redraiment的走法 动态规划<br>
+1053 Word Encoding 动态规划<br>
+1054 Jesse's Code 组合数学：排列<br>
+1055 简单密码破解 水题<br>
+1056 英文金曲大赛 水题<br>
+1057 有假币 水题<br>
+1058 寄居蟹与海葵 水题<br>
+1059 天仙配 水题<br>
+1060 鹊桥相会 水题<br>
+1061 杨辉三角 水题<br>
+1062 蟠桃记 水题<br>
+1063 养兔子 水题<br>
+1064 字符统计 水题<br>
+1065 完美数 水题<br>
+1066 亲和数 水题<br>
+1067 成绩评估 水题<br>
+1068 找零钱 水题<br>
+1069 漂亮菱形 水题<br>
+1070 Least Common Multiple 水题<br>
+1071 第几天 水题<br>
+1072 编辑距离 水题<br>
+1073 支配&#20540;数目 水题<br>
+1074 等&#20540;数目 水题<br>
+1075 两数组最短距离 水题<br>
+1076 输入入门(1) 水题<br>
+1077 输入入门(2) 水题<br>
+1078 输入入门(3) 水题<br>
+1079 输出入门 水题<br>
+1080 Counterfeit Dollar 组合数学<br>
+1081 Dividing 动态规划<br>
+1082 Sorting It All Out 图论：拓扑排序<br>
+1083 False coin 暴力法<br>
+1084 File Mapping<br>
+1085 Color Me Less 简单题<br>
+1086 Round and Round We Go 简单题<br>
+1087 Microprocessor Simulation 简单题<br>
+1088 求奇数的乘积 水题<br>
+1089 平方和与立方和 水题<br>
+1090 绝对&#20540;排序 水题<br>
+1091 JudgeOnline 水题<br>
+1092 More Beautiful 水题<br>
+1093 猴子分桃 水题<br>
+1094 C语言实验题——一元二次方程 水题<br>
+1095 C语言实验题——保留字母 水题<br>
+1096 C语言实验题——排列 水题<br>
+1097 C语言实验题——矩阵转置 水题<br>
+1098 C语言实验题——素数 水题<br>
+1099 Ambiguous permutations 简单题<br>
+1100 Home Work 贪心法<br>
+1101 Redraiment的遭遇 数学题：找规律<br>
+1102 Decorate the wall 搜索or动态规划<br>
+1103 Economic phone calls 动态规划or贪心<br>
+1104 Any fool can do it 记忆化搜索<br>
+1105 Wine trading in Gergovia 贪心法<br>
+1106 Homogeneous squares 随机算法<br>
+1107 Automatic Correction of Misspellings 字符串处理：字典序<br>
+1108 Black and white painting 简单数学题<br>
+1109 Cylinder 计算几何：公式推导<br>
+1110 Deli Deli 水题<br>
+1111 Expressions 数据结构：树的遍历<br>
+1112 Flavius Josephus Reloaded 数论：Pollard's Rho算法<br>
+1113 Annoying painting tool 贪心法<br>
+1114 Frequent values RMQ区间最&#20540;问题 OR 线段树<br>
+1115 Anagram Groups 字符串匹配<br>
+1116 Let it Bead 组合数学-&gt;Polya定理<br>
+1117 Simple Computers 简单题<br>
+1118 Mondriaan's Dream 动态规划<br>
+1119 Equidistance 计算几何<br>
+1120 How many Fibs? 高精度计算<br>
+1121 Hike on a Graph 搜索：BFS<br>
+1122 ASCII Art<br>
+1123 Billing Tables<br>
+1124 Cellular Automaton 矩阵计算<br>
+1125 Exchange<br>
+1126 Fool's Game<br>
+1127 Java vs C&#43;&#43; 字符串处理<br>
+1128 Kickdown 字符串处理<br>
+1129 Copying Books 贪心&#43;二分法<br>
+1130 Adding Reversed Numbers 简单题<br>
+1131 Glass Beads 字符串的最小表示<br>
+1132 The Circumference of the Circle 计算几何题<br>
+1133 Knight Moves 搜索：BFS<br>
+1134 Eeny Meeny Moo 变形的约瑟夫问题<br>
+1135 Lotto 组合数学<br>
+1136 Humble Numbers 动态规划<br>
+1137 Average is not Fast Enough! 简单题<br>
+1138 Etaoin Shrdlu 简单题<br>
+1139 Hard to Believe, but True! 简单题<br>
+1140 Code the Tree 简单题<br>
+1141 Fiber Network 图论：全源最短路径，Floyd-Warshall算法<br>
+1142 Global Roaming 3D几何题<br>
+1143 All in All 字符串处理<br>
+1144 The Sierpinski Fractal 递归<br>
+1145 Assistance Required 简单题：预处理<br>
+1146 Drink, on Ice 模拟题<br>
+1147 All Discs Considered 搜索：BFS<br>
+1148 In Danger 模拟题<br>
+1149 Run Length Encoding 字符串处理<br>
+1150 Bee Maja 模拟题<br>
+1151 Friends 表达式求&#20540;<br>
+1152 John 博弈论<br>
+1153 Double Queue 最大堆与最小堆<br>
+1154 ‘JBC’<br>
+1155 Loan Scheduling 贪心&#43;堆<br>
+1156 Showstopper<br>
+1157 Highway 贪心法<br>
+1158 Computers 动态规划<br>
+1159 The Stable Marriage Problem 组合数学<br>
+1160 Arne Saknussemm 模拟题<br>
+1161 Sum Problem 水题<br>
+1162 Fire Net 搜索题<br>
+1163 统计1到N之间数字1的个数 推理题<br>
+1164 最大公因子 水题<br>
+1165 C语言实验题——三个整数 水题<br>
+1166 C语言实验题——大小写转换 水题<br>
+1167 C语言实验题——分数序列 水题<br>
+1168 C语言实验题——最&#20540; 水题<br>
+1169 C语言实验题——保留整数 水题<br>
+1170 C语言实验题——矩阵下三角元素之和 水题<br>
+1171 C语言实验题——字符逆序 水题<br>
+1172 C语言实验题——打印菱形 水题<br>
+1173 C语言实验题——分割整数 水题<br>
+1174 C语言实验题——删除指定字符 水题<br>
+1175 C语言实验题——时间间隔 水题<br>
+1176 C语言实验题——数组逆序 水题<br>
+1177 C语言实验题——打印数字图形 水题<br>
+1178 C语言实验题——单词统计 水题<br>
+1179 C语言实验题——最小公倍数和最大公约数 水题<br>
+1180 Crashing Balloon 搜索题<br>
+1181 念数字 模拟题<br>
+1182 A&#43;B for Input-Output Practice(1) 水题<br>
+1183 Anagrams by Stack 搜索：回溯<br>
+1184 Elevator 数学：找规律<br>
+1185 Substrings 字符串处理<br>
+1186 Calling Extraterrestrial Intelligence Again 搜索：枚举法<br>
+1187 Do the Untwist 简单数学题<br>
+1188 数字对 水题<br>
+1189 A&#43;B for Input-Output Practice (2) 水题<br>
+1190 火星A&#43;B 简单题<br>
+1191 三齿轮问题：三个齿轮啮合 简单数学题<br>
+1192 A &#43; B Problem II 高精度计算<br>
+1193 The ones to remain 数学题<br>
+1194 Chinese Chess 博弈论<br>
+1195 Page Replacement 数据结构：队列or hash<br>
+1196 RSA Signing 数论：Pollard's Rho算法<br>
+1197 Number Guessing 搜索：穷举<br>
+1198 求n的阶乘 高精度计算<br>
+1199 Area 计算几何<br>
+1200 求两直线的夹角 水题<br>
+1201 三角形面积 水题<br>
+1202 Max Sum 动态规划<br>
+1203 Number Sequence 大数问题<br>
+1204 u Calculate e 水题<br>
+1205 斐波那契数列 高精度计算<br>
+1206 Fibonacci Again 大数问题<br>
+1207 Let the Balloon Rise 字符串处理<br>
+1208 还是A&#43;B 水题<br>
+1209 A &#43; B 水题<br>
+1210 The area 简单计算几何<br>
+1211 Ignatius's puzzle 简单数学问题<br>
+1212 Computer Transformation 高精度计算<br>
+1213 N! 高精度计算<br>
+1217 Text Reverse 水题<br>
+1220 填数字游戏 搜索：DFS<br>
+1221 Tempter of the Bone 搜索：DFS or BFS&#43;剪枝<br>
+1226 Last non-zero Digit in N! 数论<br>
+1227 三角形 递推求解<br>
+1228 回文数猜想 简单题<br>
+1229 Factorial 简单题<br>
+1230 Specialized Four-Digit Numbers 简单数学题<br>
+1231 Lowest Bit 简单题<br>
+1232 To and Fro 简单题<br>
+1233 AC Me 简单题<br>
+1234 Wolf and Rabbit 数论<br>
+1235 最大连续子序列 动态规划<br>
+1236 开门人和关门人 字符串处理<br>
+1237 排名 排序<br>
+1238 统计难题 字符串处理：字典树<br>
+1239 Tick and Tick 数学题<br>
+1240 Quoit Design 分治法<br>
+1241 钱币兑换问题 递推求解<br>
+1242 求出前m大的数 简单题<br>
+1243 角谷猜想 简单题<br>
+1244 Reverse Number 简单题<br>
+1245 寻找素数对 简单题<br>
+1246 ZJUTACM 简单题<br>
+1247 Hat's Fibonacci 高精度计算<br>
+1248 Encoding 简单题<br>
+1249 四数相加 高精度计算<br>
+1250 两数相减 高精度计算<br>
+1251 Square Coins 母函数<br>
+1252 Counting Triangles 递推求解<br>
+1253 2^x mod n = 1 数论：费尔马小定理<br>
+1254 Minimum Inversion Number 简单题<br>
+1255 Surround the Trees 计算几何：凸包<br>
+1256 Number Steps 简单题<br>
+1257 Binary Numbers 简单题<br>
+1258 Knight Moves 搜索：BFS<br>
+1259 Lotto 组合数学<br>
+1260 A Simple Task 简单题<br>
+1261 The Drunk Jailer 数论<br>
+1262 Hanoi Tower Troubles Again! 递推求解<br>
+1263 IBM Minus One 水题<br>
+1264 Definite Values 简单题<br>
+1265 Box of Bricks 水题<br>
+1266 Perfection 简单题<br>
+1267 Reverse Text 水题<br>
+1268 Inversion 模拟题<br>
+1269 Prime Cuts 简单题<br>
+1270 How Many Fibs? 高精度计算<br>
+1271 Round and Round We Go 简单题<br>
+1272 Red and Black 搜索：DFS<br>
+1273 What Day Is It? 简单题<br>
+1274 String Matching 字符串匹配<br>
+1275 A Contesting Decision 简单题<br>
+1276 Doubles 简单题<br>
+1277 The Snail 简单题<br>
+1278 Jungle Roads 图论：最小生成树<br>
+1279 Prime Ring Problem 搜索：DFS<br>
+1280 Big Number 大数问题<br>
+1281 Least Common Multiple 简单题<br>
+1283 简单排序 水题<br>
+1284 Gridland 简单题<br>
+1285 An Easy Task 简单题<br>
+1286 Calendar Game 模拟题<br>
+1287 Human Gene Functions 动态规划<br>
+1288 计算几何练习题——线段相交 计算几何<br>
+1289 计算几何练习题——线段相交II 计算几何<br>
+1290 计算几何练习题——直线交点 计算几何<br>
+1291 Trees Made to Order 递归求解<br>
+1292 排序 简单题<br>
+1293 18岁生日 简单题<br>
+1294 吃糖果 递推求解<br>
+1295 变种汉诺塔 递推求解<br>
+1296 洗牌 递推求解<br>
+1297 大数求余 数论<br>
+1298 圆桌会议 递推求解<br>
+1299 畅通工程 并查集<br>
+1300 还是畅通工程 最小生成树<br>
+1301 统计同成绩学生人数 水题<br>
+1302 简单计算器 表达式求&#20540;：栈的应用<br>
+1303 改进版计算器 表达式求&#20540;：栈的应用<br>
+1304 FatMouse' Trade 贪心法<br>
+1305 Digital Roots 大数问题<br>
+1306 Uniform Generator 数论<br>
+1307 A Mathematical Curiosity 穷举法<br>
+1308 Safecracker 穷举法<br>
+1309 The 3n &#43; 1 problem 简单题<br>
+1310 分享糖果 模拟题<br>
+1311 宝物收集 搜索：BFS<br>
+1312 Climbing Worm 简单题<br>
+1313 搬桌子 贪心法<br>
+1314 Humble Numbers 动态规划<br>
+1315 Dividing 动态规划<br>
+1316 Rightmost Digit 数学问题<br>
+1317 Leftmost Digit 数学问题<br>
+1318 Hangover 简单数学问题<br>
+1319 Exponentiation 高精度计算<br>
+1320 I Think I Need a Houseboat 简单题<br>
+1321 Girls and Boys DFS&#43;二分图<br>
+1322 Monkey and Banana 动态规划<br>
+1323 买牛奶 简单题<br>
+1324 Matrix Chain Multiplication 数据结构：栈的应用<br>
+1325 计算成绩 简单题<br>
+1326 Holding Bin-Laden Captive! 母函数<br>
+1327 You can Solve a Geometry Problem too 计算几何<br>
+1328 Super Jumping! Jumping! Jumping! 动态规划<br>
+1329 a^b 数论<br>
+1330 计算GPA 水题<br>
+1331 Give me an offer! 动态规划：0-1背包<br>
+1332 田忌赛马 贪心法<br>
+1333 Asteroids! 搜索：BFS<br>
+1334 Oil Deposits 搜索：DFS<br>
+1335 营救天使 搜索：BFS<br>
+1336 小数化分数 高精度计算<br>
+1337 I Hate It 线段树<br>
+1338 Strange Billboard 位运算&#43;枚举<br>
+1339 Frobenius 递推求解<br>
+1340 奇怪的公式 数学题<br>
+1341 Fibonacci again and again 博弈论<br>
+1342 A New Tetris Game 博弈论<br>
+1343 Sum It Up 搜索：DFS<br>
+1344 速算24点 搜索<br>
+1345 推箱子 搜索：BFS<br>
+1346 Pushing Boxes 搜索：BFS<br>
+1347 The Worm Turns 搜索<br>
+1348 Alfredo's Pizza Restaurant 简单题<br>
+1349 Broken Keyboard 字符串处理<br>
+1350 Convert Kilometers to Miles 简单题<br>
+1351 单词数 水题<br>
+1352 仙人球的残影 简单题<br>
+1353 Family planning 简单题<br>
+1354 Rout 66 简单题<br>
+1355 LC-Display 模拟题<br>
+1356 A == B ? 高精度计算<br>
+1357 不容易系列之一 递推求解<br>
+1358 折线分割平面 递推求解<br>
+1359 find the nth digit 二分查找<br>
+1360 奇数阶魔方(II) 简单题<br>
+1361 Keep on Truckin' 简单题<br>
+1362 Factstone Benchmark 简单题<br>
+1363 Destroy the Well of Life 模拟题<br>
+1365 Brave Game 博弈论<br>
+1366 ASCII码排序 水题<br>
+1367 计算两点间的距离 水题<br>
+1368 计算球体积 水题<br>
+1369 求绝对&#20540; 水题<br>
+1370 数&#20540;统计 水题<br>
+1371 求数列的和 水题<br>
+1372 水仙花数 水题<br>
+1373 多项式求和 水题<br>
+1374 素数判定 水题<br>
+1375 偶数求和 水题<br>
+1376 母牛的故事 水题<br>
+1377 数列有序! 水题<br>
+1378 发工资咯：） 水题<br>
+1379 C语言合法标识符 水题<br>
+1380 海选女主角 水题<br>
+1381 查找最大元素 水题<br>
+1382 首字母变大写 水题<br>
+1383 统计元音 水题<br>
+1384 Palindromes _easy version 水题<br>
+1385 汉字统计 水题<br>
+1386 进制转换 水题<br>
+1387 人见人爱A&#43;B 水题<br>
+1388 人见人爱A-B 水题<br>
+1389 人见人爱A^B 水题<br>
+1390 改革春风吹满地 计算几何<br>
+1391 今年暑假不AC 动态规划<br>
+1392 三角形 水题<br>
+1393 求平均成绩 水题<br>
+1394 不容易系列之二 递推求解<br>
+1395 密码 水题<br>
+1396 一只小蜜蜂... 递推求解<br>
+1397 不容易系列之(3)—— LELE的RPG难题 递推求解<br>
+1398 骨牌铺方&#26684; 递推求解<br>
+1399 阿牛的EOF牛肉串 递推求解<br>
+1400 神、上帝以及老天爷 递推求解<br>
+1401 不容易系列之(4)——考新郎 递推求解<br>
+1402 Bitset 简单题<br>
+1403 Picture 简单模拟题<br>
+1404 Switch Game 找规律<br>
+1405 An easy problem 简单模拟题<br>
+1406 A &#43; B Again 简单题<br>
+1407 The sum problem 简单数学题<br>
+1408 龟兔赛跑 动态规划<br>
+1409 Snooker 简单数学题<br>
+1410 Subset sequence 简单题<br>
+1411 汉诺塔III 递推求解<br>
+1412 &quot;红色病毒&quot;问题 递推求解<br>
+1413 小兔的棋盘 递推求解<br>
+1414 RPG的错排 错排&#43;排列组合<br>
+1415 无限的路 简单题<br>
+1416 夹角有多大 数学题<br>
+1417 汉诺塔IV 递推求解<br>
+1418 复习时间 简单题<br>
+1419 选课时间 暴力求解<br>
+1420 手机短号 字符串处理<br>
+1421 找单词 母函数<br>
+1422 简易版之最短距离 数学题<br>
+1423 数塔 动态规划<br>
+1424 核反应堆 简单题<br>
+1425 A1 = ? 公式推导<br>
+1426 剪花布条 字符串处理<br>
+1427 不要62 数学题<br>
+1428 空心三角形 字符串处理<br>
+1429 小明A&#43;B 简单题<br>
+1430 Sky数 进制转换<br>
+1431 整除的尾数 简单题<br>
+1432 分拆素数和 数论<br>
+1433 正整数解 数学题<br>
+1434 挂盐水 模拟题<br>
+1435 {A} &#43; {B} 简单题<br>
+1436 小数A&#43;B 高精度计算<br>
+1437 Zigzag 简单题<br>
+1438 螺旋形 简单题<br>
+1439 行李寄存 简单题<br>
+1440 判断多边形凹凸 计算几何<br>
+1441 The centre of polygon 计算几何<br>
+1442 最小正整数 简单题<br>
+1443 Elevator Stopping Plan 二分&#43;贪心法<br>
+1444 TOYS 计算几何<br>
+1445 The Doors 计算几何<br>
+1446 Polygon And Segment 计算几何<br>
+1447 Fence 计算几何<br>
+1448 两圆相交面积 计算几何<br>
+1449 Area of Circles 计算几何<br>
+1450 Pipe 计算几何<br>
+1451 zero sum 搜索：DFS<br>
+1452 C语言实验题——Hello World 水题<br>
+1453 C语言实验题——数日子 水题<br>
+1454 C语言实验题——三个数排序 水题<br>
+1455 C语言实验题——数字串求和 水题<br>
+1456 C语言实验题——拍皮球 水题<br>
+1457 C语言实验题——求一个3*3矩阵对角线元素之和 水题<br>
+1458 C语言实验题——数组逆序 水题<br>
+1459 C实验题——求最大&#20540; 水题<br>
+1460 C实验题——求绝对&#20540;最大&#20540; 水题<br>
+1461 C语言实验题——求平均&#20540; 水题<br>
+1462 C语言实验题——打印直角三角形 水题<br>
+1463 C语言实验题——相加和最大&#20540; 水题<br>
+1464 C语言实验题——简单编码 水题<br>
+1465 C语言实验题——某年某月的天数 水题<br>
+1466 C语言实验题——各位数字之和排序 水题<br>
+1467 C语言实验题——两个数最大 水题<br>
+1468 C语言实验题——求级数&#20540; 水题<br>
+1469 Pipe II 计算几何<br>
+1470 Transmitters 计算几何<br>
+1471 Wall 计算几何<br>
+1472 C语言实验题——逆置正整数 水题<br>
+1473 C语言实验题——找中间数 水题<br>
+1474 C语言实验题——整数位 水题<br>
+1475 C语言实验题——一元二次方程 II 水题<br>
+1476 C语言实验题——圆周率 水题<br>
+1477 C语言实验题——余弦 水题<br>
+1478 C语言实验题——打印金字塔 水题<br>
+1479 C语言实验题——排序 水题<br>
+1480 C语言实验题——约瑟夫问题 水题<br>
+1481 C语言实验题——鞍点 水题<br>
+1482 C语言实验题——计算表达式 水题<br>
+1483 C语言实验题——汉诺塔 水题<br>
+1484 C语言实验题——字符串排序 水题<br>
+1485 C语言实验题——整除 水题<br>
+1486 Solitaire 搜索：（双向）BFS<br>
+1487 Abbreviation 水题<br>
+1488 C语言实验题——买糖果 水题<br>
+1489 C语言实验题——字符编码 水题<br>
+1490 C语言实验题——合法的C标识符 水题<br>
+1491 C语言实验题——三角形面积 水题<br>
+1492 C语言实验题——大小写转换 水题<br>
+1493 C语言实验题——圆柱体计算 水题<br>
+1494 C语言实验题——温度转换 水题<br>
+1495 C语言实验题——统计字串 水题<br>
+1496 C语言实验题——字符过滤 水题<br>
+1497 Coin Change 暴力求解<br>
+1498 Beautiful Meadow 搜索题<br>
+1499 C语言实验题——鸡兔同&#31548; 水题<br>
+1500 Coins of Luck 数学题：数学期望<br>
+1501 Friends 搜索：DFS<br>
+1502 Find All M^N Please 数学题<br>
+1503 Incredible Cows 搜索：二分&#43;DFS<br>
+1504 计算直线的交点数 递推求解<br>
+1505 Number Game 动态规划<br>
+1506 Sort ZOJ7 字符串处理<br>
+1507 Find 7 Faster Than John Von Neumann 高精度计算<br>
+1508 免费馅饼 动态规划<br>
+1509 Worm 动态规划<br>
+1510 Common Subsequence 动态规划<br>
+1511 搬寝室 动态规划<br>
+1512 Daydream 字符串处理<br>
+1513 Ballroom Lights<br>
+1514 Drop the Triples<br>
+1515 Finding Seats<br>
+1516 He is offside!<br>
+1517 Justice League<br>
+1518 星星点点 搜索<br>
+1519 逆波兰表达式 表达式求解：栈的应用<br>
+1520 十六进制 高精度计算<br>
+1521 Palindromic sequence<br>
+1522 Hotel 模拟题<br>
+1523 Intersecting Lines 计算几何<br>
+1524 Heap Construction 最短路径<br>
+1525 Pizza Anyone?<br>
+1526 Adam's Genes<br>
+1527 Risk<br>
+1528 Just the Facts 数论<br>
+1529 Horse Shoe Scoring 计算几何<br>
+1530 哥德巴赫猜想 数论<br>
+1531 爱的伟大意义 简单题<br>
+1532 校门外的树 模拟题<br>
+1533 最多约数问题 数论<br>
+1534 Quicksum 数学题<br>
+1535 找规律填数字 数学题<br>
+1536 Accepted Necklace 搜索：DFS<br>
+1537 除法表达式 数论<br>
+1538 A Walk Through the Forest 图论：最短路径<br>
+1539 Accurately Say &quot;CocaCola&quot;! 简单题<br>
+1540 Build The Electric System 图论：最小生成树<br>
+1541 Colorful Rainbows 计算几何<br>
+1542 Easy Task 数学题<br>
+1543 Faster, Higher, Stronger 简单题<br>
+1544 Give Me the Number 模拟题<br>
+1545 Hurdles of 110m 动态规划<br>
+1546 Just Pour the Water 矩阵计算<br>
+1547 Kinds of Fuwas 穷举法<br>
+1548 复数运算 简单题<br>
+1549 元素个数排序 简单题<br>
+1550 Fiber Communications<br>
+1551 Power Hungry Cows 搜索：BFS<br>
+1552 Cow Cycling 动态规划<br>
+1553 Rebuilding Roads 树型DP<br>
+1554 Triangular Pastures 动态规划<br>
+1555 Chores 动态规划<br>
+1556 Extra Krunch<br>
+1557 BUY LOW, BUY LOWER 动态规划<br>
+1558 Hypnotic Milk Improvement<br>
+1559 Happy Cows<br>
+1560 Unary Cow Counting<br>
+1561 Dairy Route<br>
+1562 Calf Numbers<br>
+1563 Hide and Seek<br>
+1564 Mountain Majesties<br>
+1565 Secret Milk Pipes<br>
+1566 Circus Tickets<br>
+1567 Life Cycle<br>
+1568 Wiggle Numbers<br>
+1569 Superwords<br>
+1570 Cow Brainiacs<br>
+1571 Pasture Fences<br>
+1572 New Years Party<br>
+1573 Strolling Cows<br>
+1574 Grazing Sets<br>
+1575 Factorial Power<br>
+1576 Friday the Thirteenth<br>
+1577 Beef McNuggets<br>
+1578 Calf Flac<br>
+1579 Light Bulbs<br>
+1580 Cow Math 图论<br>
+1581 Cow Imposters 动态规划<br>
+1582 Traffic Lights 递推求解<br>
+1583 Farm Tour 图论：最短路径<br>
+1584 Vertical Histogram 简单题<br>
+1585 Cowties 动态规划<br>
+1586 Travel Games 搜索：DFS<br>
+1587 Best Cow Fences 二分法<br>
+1588 Cornfields RMQ问题<br>
+1589 Six Degrees of Cowvin Bacon 简单题<br>
+1590 Herd Sums 简单题<br>
+1591 Message Decoding 简单题<br>
+1592 Mountain Walking 二分&#43;flood fill<br>
+1593 Millenium Leapcow 动态规划<br>
+1594 Optimal Milking 最大流&#43;二分法<br>
+1595 Bale Figures 模拟&#43;二分法<br>
+1596 Jumping Cows 动态规划<br>
+1597 Lost Cows SBT树<br>
+1598 Bovine Math Geniuses 简单题<br>
+1599 Dividing the Path 动态规划<br>
+1600 Fence Obstacle Course 动态规划<br>
+1601 Cow Ski Area 图论：flood fill<br>
+1602 Cleaning Shifts 贪心法<br>
+1603 Bad Cowtractors 最大生成树<br>
+1604 Tree Cutting 树状动态规划<br>
+1605 Navigation Nightmare 并查集<br>
+1606 Cow Marathon 树状动态规划<br>
+1607 Distance Queries LCA，tarjan算法<br>
+1608 Distance Statistics 楼天成大牛“男人八题”中的一道<br>
+1609 Moo University - Team Tryouts 排序&#43;穷举法<br>
+1610 Moo University - Emergency Pizza Order<br>
+1611 Moo University - Financial Aid 最大堆、最小堆<br>
+1612 Cube Stacking 并查集<br>
+1613 The Cow Lineup 穷举法<br>
+1614 MooFest 线段树<br>
+1615 Turning in Homework 动态规划<br>
+1616 Alignment of the Planets<br>
+1617 Finding Bovine Roots<br>
+1618 Cow Bowling<br>
+1619 Cow Patterns 字符串匹配的扩展<br>
+1620 Barn Expansion 二分查找<br>
+1621 Layout 差分约束系统<br>
+1622 Knights of Ni 搜索：BFS<br>
+1623 Cleaning Shifts DP＋Heap<br>
+1624 Scales 搜索&#43;剪枝<br>
+1625 Secret Milking Machine 二分&#43;网络流<br>
+1626 Aggressive cows 二分法<br>
+1627 Rigging the Bovine Election 穷举法<br>
+1628 Feed Accounting 简单模拟题<br>
+1629 Muddy Fields 穷举法<br>
+1630 The Wedding Juicer 堆&#43;flood fill<br>
+1631 Naptime 动态规划<br>
+1632 Sumsets 动态规划<br>
+1633 Moo Volume 简单题<br>
+1634 Ombrophobic Bovines Floyd-Warshall<br>
+1635 Space Elevator 动态规划<br>
+1636 Yogurt factory 动态规划<br>
+1637 Checking an Alibi 最短路径<br>
+1638 Out of Hay<br>
+1639 Satellite Photographs 搜索：BFS or DFS<br>
+1640 Asteroids 最大网络流<br>
+1641 Grazing on the Run 动态规划<br>
+1642 Walk the Talk 动态规划<br>
+1643 City Skyline 栈的应用<br>
+1644 Cow Acrobats 贪心法<br>
+1645 Ant Counting 动态规划<br>
+1646 Hopscotch 搜索：DFS<br>
+1647 Securing the Barn 穷举法<br>
+1648 Bovine Birthday 递推求解<br>
+1649 Max Factor 简单题<br>
+1650 Flying Right<br>
+1651 Close Encounter<br>
+1652 Allowance<br>
+1653 Lazy Cows<br>
+1654 Expedition<br>
+1655 Around the world<br>
+1656 Landscaping<br>
+1657 Waves<br>
+1658 Navigating the City<br>
+1659 Disease Management<br>
+1660 Muddy roads<br>
+1661 Wormholes 最短路径<br>
+1662 The Fewest Coins 动态规划<br>
+1663 Milk Patterns 二分法or后缀树<br>
+1664 Cow Picnic 搜索：BFS or DFS<br>
+1665 Cow Roller Coaster 动态规划<br>
+1666 River Hopscotch 二分法&#43;贪心<br>
+1667 The Moronic Cowmpouter 进制转换<br>
+1668 DNA Assembly 穷举法<br>
+1669 Cow Phrasebook 二分法<br>
+1670 Cellphones 穷举法<br>
+1671 Steady Cow Assignment 网络流<br>
+1672 Treats for the Cows 动态规划<br>
+1673 Backward Digit Sums 穷举法<br>
+1674 Stump Removal 简单题<br>
+1675 Finicky Grazers 动态规划<br>
+1676 The Water Bowls 枚举二进制位<br>
+1677 Redundant Paths 图论<br>
+1678 Roping the Field 动态规划<br>
+1679 Corral the Cows 二分法<br>
+1680 The Cow Prom 图论<br>
+1681 Dollar Dayz 动态规划<br>
+1682 The Grove 最短路径<br>
+1683 Fence Repair Huffman编码<br>
+1684 Corn Fields 状态压缩DP<br>
+1685 Roadblocks 图论：最短路径<br>
+1686 Bad Hair Day 搜索<br>
+1687 Big Square 穷举法<br>
+1688 Round Numbers 枚举二进制位<br>
+1689 Building A New Barn<br>
+1690 Cow Sorting 置换群<br>
+1691 Lilypad Pond 最短路径<br>
+1692 The Cow Lexicon 动态规划<br>
+1693 Silver Cow Party 最短路径<br>
+1694 Problem Solving 动态规划<br>
+1695 Cow School<br>
+1696 Protecting the Flowers 贪心法<br>
+1697 Tallest Cow 区间统计<br>
+1698 Balanced Lineup RMQ问题<br>
+1699 Gold Balanced Lineup RMQ问题<br>
+1700 Ranking the Cows 搜索：DFS<br>
+1701 Face The Right Way 穷举法<br>
+1702 Cow Traffic 动态规划<br>
+1703 Monthly Expense 贪心法<br>
+1704 Cheapest Palindrome 动态规划<br>
+1705 Dining 贪心&#43;网络流<br>
+1706 City Horizon 离散化&#43; 扫描<br>
+1707 Catch That Cow 最短路径<br>
+1708 Fliptile 枚举&#43;位压缩<br>
+1709 2-Dimensional Rubik's Cube 搜索：BFS<br>
+1710 Ball 计算几何<br>
+1711 3D Camera 三维计算几何<br>
+1712 Cipher 模拟题<br>
+1713 Five in a Row 简单题<br>
+1714 Pinhole Imaging 简单计算几何<br>
+1715 URL 模拟题<br>
+1716 Battle of Submarines 集合DP<br>
+1717 WOJ 动态规划<br>
+1718 钥匙计数之二 递推求解<br>
+1719 BrokenLED 模拟题<br>
+1722 A&#43;B again and again! 模拟题<br>
+1723 Just calculate it! 数论<br>
+1724 Guess how much I love you? 简单题<br>
+1725 NBA Finals<br>
+1726 Find Out an “E”<br>
+1727 Judging ACM/ICPC<br>
+1728 Cryptography of Alex<br>
+1729 Rings of square grid<br>
+1730 Fermat's Theorem<br>
+1731 Cup 二分法<br>
+1732 Find the Path DP&#43;二分法<br>
+1733 Five in a Row, Again 动态规划<br>
+1734 Minimum Heap 递推求解<br>
+1735 Name PK 模拟题<br>
+1736 Pendant 动态规划<br>
+1737 Radar 计算几何&#43;搜索<br>
+1738 Ring 多串模式匹配<br>
+1739 Run 计算几何<br>
+1740 Toxophily 简单题<br>
+1741 通讯录编排 简单题<br>
+1742 超缘分ACM队伍 简单题<br>
+1743 集合运算 简单题<br>
+1744 矩阵计算 简单题<br>
+1745 Arbitrage 动态规划<br>
+1746 The Tower of Babylon 动态规划<br>
+1747 Binomial Showdown 组合数学<br>
+1748 Dungeon Master 搜索：BFS<br>
+1749 Equation Solver 表达式求&#20540;应用<br>
+1750 Frogger 最短路径<br>
+1751 Globetrotter 计算几何<br>
+1752 Tree Recovery 数据结构：二叉树<br>
+1753 Artificial Intelligence?<br>
+1754 The Settlers of Catan 搜索<br>
+1755 France '98 概率问题<br>
+1756 Goldbach's Conjecture 数论<br>
+1757 Heavy Cargo 最小生成树<br>
+1758 Quadtree<br>
+1759 From Dusk till Dawn or: Vladimir the Vampire 最短路径<br>
+1760 Euro Cup 2000<br>
+1761 Quadtree II or: Florida Jones strikes back<br>
+1762 HTML 简单题<br>
+1763 Paths on a Grid 组合数学：T路问题<br>
+1764 Balanced Food 动态规划<br>
+1765 California Jones and the Gate to Freedom 组合数学<br>
+1766 Diplomatic License 简单计算几何题<br>
+1767 Polygon Programming with Ease 数学题<br>
+1768 Hall of Fountains 搜索：BFS or DP<br>
+1769 The Bottom of a Graph 图论：强连通分量<br>
+1770 Edge<br>
+1771 Fold<br>
+1772 Largest Rectangle in a Histogram 动态规划<br>
+1773 Boolean Logic<br>
+1774 Code<br>
+1775 In Danger 模拟题<br>
+1776 Fractran<br>
+1777 Huffman's Greed<br>
+1778 Bullshit Bingo 字符串处理<br>
+1779 A Song contest<br>
+1780 Message<br>
+1781 The skatepark's new ramps<br>
+1782 Road<br>
+1783 Warfare<br>
+1784 Blackjack<br>
+1785 Robintron<br>
+1786 Diamond Dealer 计算几何：凸包<br>
+1787 Best Compression Ever<br>
+1788 Code Theft<br>
+1789 Dinner<br>
+1790 Event Planning<br>
+1791 Getting Gold<br>
+1792 Introspective Caching<br>
+1793 Just A Few More Triangles!<br>
+1794 Knights of the Round Table 图论：无向图的块判断奇圈<br>
+1795 The Cow Doctor 穷举法<br>
+1796 Wild West 线段树<br>
+1797 Find the Clones<br>
+1798 The Warehouse<br>
+1799 Widget Factory 数论：同余方程组<br>
+1800 Martian Mining 动态规划<br>
+<br>
+<br>
+3301 字符串；AC自动机， 动态规划；状态压缩<br>
+3302 计算几何<br>
+3303 数学；代数运算；高斯消元<br>
+3304 图论；强连通分量；2-SAT<br>
+3305 动态规划；凸单调性优化<br>
+3306 枚举<br>
+3307 贪心<br>
+3308 数学；代数运算<br>
+3309 最短路；佛洛伊德<br>
+3310 动态规划<br>
+3311 贪心<br>
+3312 计数问题；递推，数状数组，二分查找<br>
+3313 数论；欧拉定理，快速幂取模<br>
+3314 计数问题，数状数组<br>
+3315 博弈；Surreal数；Farey数列；<br>
+3316 计数问题；递推，高精度<br>
+3317 计数问题；容斥原理<br>
+3318 递推；矩阵乘法<br>
+3319 数学；概率<br>
+3320 背包<br>
+3321 动态规划<br>
+3322 字符串；AC自动机<br>
+3323 动态规划<br>
+3324 博弈<br>
+3325 搜索<br>
+3326 贪心<br>
+3327 最短路<br>
+3328 数据结构（实现一种数据结构，支持要求的操作），数状数组<br>
+3329 图论；二分图最大权匹配<br>
+3330 数学；数论<br>
+3331 递推；矩阵乘法<br>
+3332 数学；数论，二分查找<br>
+3333 计算几何<br>
+3334 动态规划<br>
+3335 字符串，后缀数组或拉宾卡普；动态规划<br>
+3336 数据结构；并查集<br>
+3337 计数问题，递推<br>
+3338 二分查找，贪心<br>
+3339 数学<br>
+3340 计算几何；凸包，图论；佛洛伊德；最小环<br>
+3341 动态规划<br>
+3342 广搜<br>
+3343 动态规划<br>
+3344 计算几何<br>
+3345 二分图最大匹配<br>
+3346 树型DP<br>
+3347 动态规划<br>
+3348 数学；数论；进制<br>
+3349 计数问题<br>
+3350 贪心<br>
+3351 数学；数论；进制<br>
+3352 动态规划，数论，组合数学<br>
+3353 数学；数论<br>
+3354 计数；递推<br>
+3355 图论；佛洛伊德<br>
+3356 博弈<br>
+3357 动态规划<br>
+3358 数据结构；线段树，数状数组<br>
+3359 计算几何，动态规划<br>
+3360 博弈；SG函数<br>
+3361 图论；最近公共祖先<br>
+3362 图论；强连通分量；2－SAT<br>
+3363 计算几何<br>
+3364 字符串；AC自动机，动态规划<br>
+3365 搜索，舞蹈链<br>
+3366 数学；数论<br>
+3367 数学；代数运算；高斯消元<br>
+3368 动态规划<br>
+3369 计数问题；递推<br>
+3370 网络流（错题）<br>
+3371 树型DP<br>
+3372 数学；高精度<br>
+3373 数学；<br>
+3374 RMQ<br>
+3376 数学；进制<br>
+3377 字符串；后缀数组<br>
+3378 动态规划<br>
+3379 计算几何<br>
+3380 线段树<br>
+3381 图论；欧拉路<br>
+3382 简单题<br>
+3383 字符串；AC自动机<br>
+3384 广搜<br>
+3385 计算几何，矩阵<br>
+3386 语言处理<br>
+3387 动态规划；状态压缩<br>
+3388 图论；全局最小割<br>
+3389 简单题<br>
+3390 广搜<br>
+3391 数学；Pell方程<br>
+3392 背包<br>
+3393 计算几何<br>
+3394 广搜<br>
+3395 搜索；迭代加深<br>
+3396 数学；计数问题<br>
+3397 数学；解方程<br>
+3398 分析<br>
+3399 模拟<br>
+3400 数学；计数问题，数论</p>
+</div>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad" style="float: right;" data-mod="popu_172">
+<a href="#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"  style="background-position:0 -52px !important"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"style="background-position:0 -104px !important"></a>
+<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"style="background-position:0 -260px !important"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"style="background-position:0 -208px !important"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"style="background-position:0 -1612px !important" ></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   <link rel="stylesheet" href="http://static.blog.csdn.net/css/blog_detail.css" />
+
+    
+<!--172.16.140.13-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+ 
+
+        <div id="digg" ArticleId="8130574">
+            <dl id="btnDigg" class="digg digg_disable">
+               
+                 <dt>顶</dt>
+                <dd>1</dd>
+            </dl>
+            <dl id="btnBury" class="digg digg_disable">
+              
+                  <dt>踩</dt>
+                <dd>0</dd>
+            </dl>
+        </div>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='/smarteryu/article/details/8130566';">上一篇</span><a href="/smarteryu/article/details/8130566" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">joj (神一般的循序渐进200题 扩充版 11.08.20)</a></li>
+                <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='/smarteryu/article/details/8130577';">下一篇</span><a href="/smarteryu/article/details/8130577" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">poj题目分类</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+        <div class="similar_article"  style="display:none">
+                <h4>我的同类文章</h4>
+                <div class="similar_c"style="margin:20px 0px 0px 0px">
+                    <div class="similar_c_t">
+                                <label class="similar_cur">
+                                    <span  style="cursor:pointer"  onclick="GetCategoryArticles('1269590','SmarterYu','foot','8130574');">参考转载<em>（11）</em></span>
+                                </label>
+                    </div>
+                   
+                    <div class="similar_wrap tracking-ad" data-mod="popu_141"  style="max-height:195px;">
+                        <a href="http://blog.csdn.net" style="display:none">http://blog.csdn.net</a>
+                        <ul class="similar_list fl">                          
+                        </ul>
+
+                        <ul class="similar_list fr">                           
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+    <script  type="text/javascript">
+        $(function () {
+            GetCategoryArticles('1269590', 'SmarterYu','foot','8130574');
+        });
+    </script>
+      
+</div>
+<div id="suggest"></div>
+         <script  language="javascript" type='text/javascript'>     
+             $(function(){
+                 $.get("/SmarterYu/svc/GetSuggestContent/8130574",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+
+<style>
+.blog-ass-articl dd {
+color: #369;
+width: 99%; /*修改行*/
+float: left;
+overflow: hidden;
+font: normal normal 12px/23px "SimSun";
+height: 23px;
+margin: 0;
+padding: 0 0 0 10px;
+margin-right: 30px;
+background: url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;
+}
+</style>
+
+<dl class="blog-ass-articl" id="res-relatived" > 
+    <div class="embody embody_b" id="libkeyparent"  style="display:none">
+            <span class="embody_t">更多资料请参考：</span>
+            <div class="embody_c" id="libkey"></div>
+    </div>
+
+
+     <dt><span>猜你在找</span></dt>    
+
+
+   
+
+
+    <div id="adCollege" style="width: 42%;float: left;"> 
+        <script src="http://csdnimg.cn/jobreco/job_reco.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+            csdn.position.showEdu({
+                sourceType: "blog",
+                searchType: "detail",
+                searchKey: "8130574",
+                username: "",
+                recordcount: "5",
+                containerId: "adCollege" //容器DIV的id。 
+            });
+        </script> 
+    </div>  
+
+    
+     <div id="res"  data-mod="popu_36"  class="tracking-ad" style="width: 42%;float: left;margin-right: 30px;"></div>
+   
+</dl>
+
+
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+            var searchtitletags = 'hdu题目分类' + ',' + $("#tags").html();
+            searchService({
+                index: 'blog',
+                query: searchtitletags,
+                from: 5,
+                size: 5,
+                appendTo: '#res',
+                url: 'recommend',
+                his: 2,
+                client: "blog_cf_enhance",
+                tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+            });
+        }, 500);
+    });    
+
+ </script>  
+
+    <div id="ad_cen">        
+<!--AdForward Begin:-->
+<script type="text/javascript" src="http://csdnim.qtmojo.com/main/s?user=csdn|blog|banner2&db=csdnim&border=0&local=yes&js=ie" charset="gbk"></script>
+<!--AdForward End-->    </div>  
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list">
+    </div>
+    <div id="comment_bar">
+    </div>
+    <div id="comment_form">
+    </div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '8130574';
+    var commentscount = 0;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+<div class="tag_list" style="display:none"></div>
+  <script  language="javascript" type='text/javascript'>     
+      $(function(){
+              setTimeout(function(){
+                  $.get("/SmarterYu/svc/GetTagContent",function(data){
+                      $(".tag_list").html(data).show();
+                  });     
+              });
+          },500);                       
+ </script> 
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });
+        },200);  
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }    
+
+
+    $(function()
+    {
+        $.ajax({
+            type: 'get',
+            url: 'http://internalapi.csdn.net/knowledge/public/public/api/words?x-acl-token=9DeJLGuYSy/6nSmDQen5amEWUh0K',
+            async: false,
+            dataType: 'jsonp',
+            jsonp:'callback',
+            success: function (resobj) {
+                if(resobj.msg == "ok")
+                {
+                    var resData = resobj.data,
+                            data=[];
+
+                    var storage = window.localStorage;
+                    storage.setItem('preData',resData);
+                    storage.setItem('realData',JSON.stringify(resData));
+
+                    var strRealData = storage.realData;
+                    data = eval(strRealData);
+
+                    /*if(+new Date() > +new Date() -1)
+                     {
+                     storage.removeItem('realData');
+                     }*/
+                    var wsCache = new WebStorageCache();
+                    if(wsCache.isSupported())
+                    {
+                        wsCache.set(strRealData,'relData',{exp:86400});
+                    }
+
+                    var regarr = [],
+                            regs = [],
+                            arrUrl = [];
+                    for(var a=0; a<data.length;a++)
+                    {
+                        data[a].flg = false;
+                    }
+                    start($("#article_content"));                   
+                    function start(obj)
+                    {
+                        var tags = [];
+                        depe(obj);
+                        function depe(obj)
+                        {
+                            var subobj = obj.find('*');
+                            var l = subobj.length;
+
+                            if(l<=0)
+                            {
+                                return false;
+                            }
+                            for(var q=0;q<l;q++)
+                            {
+                                var s = subobj.eq(q).find('*');
+                                if(!subobj.eq(q).hasClass('dp-highlighter'))
+                                {
+                                    if(s.length>0)
+                                    {
+                                        depe(subobj.eq(q));
+                                    }else{
+                                        tags.push((subobj.eq(q))[0]);
+                                    }
+                                }
+                            }
+                        }
+                        for(var n=0;n<tags.length;n++)
+                        {
+                            selectext($(tags[n]));
+                        }
+                        for(var p=0;p<regarr.length;p++)
+                        {
+                            var Regs = eval(regarr[p]);
+                            Regs.flg = false;
+                            regs.push(Regs);
+                        }
+                        console.log(regarr);
+                        for(var n=0;n<tags.length;n++)
+                        {
+                            for(var i=0;i<regs.length;i++)
+                            {
+                                callback($(tags[n]),regs[i],arrUrl[i]);
+                            }
+                        }
+                    }
+                    function selectext(subs)
+                    {
+                        var oHtml = subs.html();
+                        var regflg = false;
+
+                        if(resobj.msg == 'ok')
+                        {
+                            for(var i=0; i<data.length; i++)
+                            {
+                                var str = data[i].word;
+                                var regStr = /([\u4e00-\u9fa5]+)\w*/ig.test(str) ? '^'+str+'$': '\\b'+str+'\\b';
+                                var Reg = new RegExp(regStr,'i');
+                                if(oHtml.search(Reg) !== -1)
+                                {
+                                    if(regarr.length<=0)
+                                    {
+                                        regarr.push((Reg+''));
+                                    }else{
+                                        for(var e=0;e<regarr.length;e++)
+                                        {
+                                            if(Reg!=regarr[e])
+                                            {
+                                                regflg=true;
+                                                //continue;
+                                            }else{
+                                                // break;
+                                                regflg = false;
+                                            }
+                                        }
+                                    }
+                                    if(regflg)
+                                    {
+                                        regarr.push((Reg+''));
+                                    }
+                                    var strUrl = data[i].url;
+                                    arrUrl.push(strUrl);
+                                }
+                            }
+                        }
+                    }
+                    function callback(obj,Reg,arrUrl)
+                    {
+                        var oHtml = obj.html();
+                        if(Reg.flg)
+                        {
+                            return false;
+                        }
+                        var s = oHtml.replace(Reg,function(word){
+                            Reg.flg=true;
+                            var str="<a href="+arrUrl+" target='_blank'>"+word+"</a>"
+                            var str2="<a href="+arrUrl+" target='_blank'><b>"+word+"知识库</b></a>"
+                            if($("#libkey").html().toString().indexOf(word)==-1)
+                            {
+                                $("#libkey").append(str2).append("&nbsp;&nbsp;&nbsp;&nbsp;");
+                            }
+                            $("#libkeyparent").show()
+                            return str;
+                        });
+                        obj.html(s);
+                    }
+                }
+            },
+            error: function () {
+                console.log("Send Ajax error ...")
+            }
+        });
+    });
+
+</script>
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/SmarterYu" target="_blank">
+    <img src="http://avatar.csdn.net/4/1/7/1_smarteryu.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/SmarterYu" class="user_name" target="_blank">SmarterYu</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter"  title="[发私信]" onclick="window.open('http://msg.csdn.net/letters/model?receiver=SmarterYu','_blank','height=350,width=700');_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>  
+</div>
+<div id="blog_medal">
+                <div id="bms_box">
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>55001次</span></li>
+    <li>积分：<span>1019</span> </li>    
+    <li >等级： <span style="position:relative;display:inline-block;z-index:1" >
+            <img src="http://c.csdnimg.cn/jifen/images/xunzhang/jianzhang/blog4.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：1019 </div>
+        </span>  </li>
+    <li>排名：<span>千里之外</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>48篇</span></li>
+    <li>转载：<span>18篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>7条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";
+            window.location.href = url;
+        }   
+    });
+</script><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">    
+                 <li>
+                    <a href="/SmarterYu/article/category/1267615" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">OJ</a><span>(17)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1269264" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">谁说程序员不解风情</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1269590" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">参考转载</a><span>(12)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1272910" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">业界</a><span>(8)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1275427" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">乱七八糟</a><span>(6)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1276810" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">汇编</a><span>(8)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1361121" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Linux C</a><span>(8)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/1374134" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">数据结构</a><span>(10)</span>
+                </li>
+                 <li>
+                    <a href="/SmarterYu/article/category/2287213" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">MachineLearning笔记</a><span>(1)</span>
+                </li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="/SmarterYu/article/month/2014/05">2014年05月</a><span>(1)</span></li><li><a href="/SmarterYu/article/month/2013/09">2013年09月</a><span>(6)</span></li><li><a href="/SmarterYu/article/month/2013/08">2013年08月</a><span>(1)</span></li><li><a href="/SmarterYu/article/month/2013/07">2013年07月</a><span>(5)</span></li><li><a href="/SmarterYu/article/month/2013/06">2013年06月</a><span>(4)</span></li><li><a href="/SmarterYu/article/month/2013/03">2013年03月</a><span>(13)</span></li><li><a href="/SmarterYu/article/month/2012/11">2012年11月</a><span>(27)</span></li><li><a href="/SmarterYu/article/month/2012/10">2012年10月</a><span>(9)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/smarteryu/article/details/8655744" title="sockaddr与sockaddr_in,sockaddr_un结构体详细讲解">sockaddr与sockaddr_in,sockaddr_un结构体详细讲解</a><span>(6535)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8130574" title="hdu题目分类">hdu题目分类</a><span>(4071)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8656259" title="Linux C 网络编程——多线程的聊天室实现（服务器端）">Linux C 网络编程——多线程的聊天室实现（服务器端）</a><span>(4069)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8656301" title="Linux C 网络编程——多线程的聊天室实现（客户端）">Linux C 网络编程——多线程的聊天室实现（客户端）</a><span>(1913)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/11182125" title="侧信道（Side Channel）攻击对加密Web应用造成的敏感信息泄露">侧信道（Side Channel）攻击对加密Web应用造成的敏感信息泄露</a><span>(1907)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8162679" title="百度缺的不是狼性，而是鲁滨逊">百度缺的不是狼性，而是鲁滨逊</a><span>(1786)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8159019" title="李彦宏发内部邮件反思：鼓励狼性、淘汰小资">李彦宏发内部邮件反思：鼓励狼性、淘汰小资</a><span>(1776)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8654643" title="关于  INADDR_ANY">关于  INADDR_ANY</a><span>(1441)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/9208763" title="poj-2945:拦截导弹">poj-2945:拦截导弹</a><span>(1217)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8159124" title="李开复谈创业失败十原因：经不住诱惑 直接山寨">李开复谈创业失败十原因：经不住诱惑 直接山寨</a><span>(1150)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/smarteryu/article/details/8656301" title="Linux C 网络编程——多线程的聊天室实现（客户端）">Linux C 网络编程——多线程的聊天室实现（客户端）</a><span>(4)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8155737" title="扩展欧几里得（Extended Euclid）算法求最大公约数和乘法逆元">扩展欧几里得（Extended Euclid）算法求最大公约数和乘法逆元</a><span>(1)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8624410" title="把圆形放入矩形的Packing问题">把圆形放入矩形的Packing问题</a><span>(1)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8656259" title="Linux C 网络编程——多线程的聊天室实现（服务器端）">Linux C 网络编程——多线程的聊天室实现（服务器端）</a><span>(1)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8136143" title="最小生成树——prim算法">最小生成树——prim算法</a><span>(0)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/26845243" title="第一讲——简介">第一讲——简介</a><span>(0)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8130566" title="joj (神一般的循序渐进200题 扩充版 11.08.20)">joj (神一般的循序渐进200题 扩充版 11.08.20)</a><span>(0)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8127766" title="memset函数详细说明">memset函数详细说明</a><span>(0)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8127694" title="正权最短路径——Dijkstra">正权最短路径——Dijkstra</a><span>(0)</span>
+</li>
+<li>
+<a href="/smarteryu/article/details/8119940" title="6th Jilin Province Collegiate Programming Contest ——Problem B: Chinese Knight(改进)">6th Jilin Province Collegiate Programming Contest ——Problem B: Chinese Knight(改进)</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend">
+<ul>
+<li><a href="http://blog.csdn.net/androidlushangderen/article/details/50760170" 
+
+target="_blank">* HDFS如何检测并删除多余副本块</a></li>
+<li><a href="http://blog.csdn.net/kinfey/article/details/50754770" 
+target="_blank">* Project Perfect让Swift在服务器端跑起来－让Perfect更Rails (五)</a></li>
+<li><a href="http://blog.csdn.net/u011225629/article/details/50492403" 
+
+target="_blank">* 数据库性能优化之SQL语句优化</a></li>
+<li><a 
+
+href="http://blog.csdn.net/tanzuozhev/article/details/50603507"target="_blank">*R语言 非标准化求值（Non-standard evaluation， NSE）</a></li>
+<li><a href="http://blog.csdn.net/han_xiaoyang/article/details/50759472" 
+target="_blank">* 机器学习系列(7)_机器学习路线图（附资料）</a></li>
+<li><a href="http://blog.csdn.net/benpaobagzb/article/details/50783661
+
+target="_blank">*一个程序员的Java和C，C++学习之路(整理)</a></li>
+
+</ul></ul>
+</div>
+
+
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/smarteryu/article/details/8155737#comments">扩展欧几里得（Extended Euclid）算法求最大公约数和乘法逆元</a>
+    <p style="margin:0px;"><a href="/sinat_27216841" class="user_name">sinat_27216841</a>:
+这个用的是矩阵法吗
+    </p>
+    </li>
+    <li>
+   
+         <a href="/smarteryu/article/details/8656301#comments">Linux C 网络编程——多线程的聊天室实现（客户端）</a>
+    <p style="margin:0px;"><a href="/qq_28217963" class="user_name">qq_28217963</a>:
+楼主好人,求客户端代码,感激不尽!!309162998@qq.com
+    </p>
+    </li>
+    <li>
+   
+         <a href="/smarteryu/article/details/8656301#comments">Linux C 网络编程——多线程的聊天室实现（客户端）</a>
+    <p style="margin:0px;"><a href="/linrs0" class="user_name">linrs0</a>:
+原创的客户端代码竟然和服务端是一样的，我看别人的反倒是正确的，怪哉怪哉，http://blog.si...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/smarteryu/article/details/8656259#comments">Linux C 网络编程——多线程的聊天室实现（服务器端）</a>
+    <p style="margin:0px;"><a href="/u012256122" class="user_name">u012256122</a>:
+博主，你的服务器和客户端代码一样啊，求服务器与客户端代码，邮箱：1416356097@qq.com,...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/smarteryu/article/details/8656259#comments">Linux C 网络编程——多线程的聊天室实现（客户端）</a>
+    <p style="margin:0px;"><a href="/a5606020" class="user_name">a5606020</a>:
+为什么客户端的代码和服务器的一模一样的？求把客户端的代码发给我，万分谢谢！！！287218193@q...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/smarteryu/article/details/8656259#comments">Linux C 网络编程——多线程的聊天室实现（客户端）</a>
+    <p style="margin:0px;"><a href="/a5606020" class="user_name">a5606020</a>:
+为什么客户端的代码和服务器的一模一样的？求把客户端的代码发给我，万分谢谢！！！287218193@q...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/smarteryu/article/details/8624410#comments">把圆形放入矩形的Packing问题</a>
+    <p style="margin:0px;"><a href="/wushangyangguang" class="user_name">wushangyangguang</a>:
+231行的时候。。为什么不二分呢。。。
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+ </div>   
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="http://c.csdnimg.cn/rabbit/cnick/cnick.js"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+
+
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=1363622"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/JavaScript1.js"></script>
+
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+    </div>
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://c.csdnimg.cn/public/common/toolbar/js/toolbar.js"></script>     <!--new top-->
+   
+    <link href="http://c.csdnimg.cn/comm_ask/css/ask_float_block.css" type="text/css" rel="stylesheet" />
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/libs/wmd.js'></script>
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/libs/showdown.js'></script>
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/libs/prettify.js'></script>
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/apps/ask_float_block.js'></script>
+   
+</body>
+</html>   
+ 

@@ -1,26 +1,29 @@
 # ACM_Module.py
 import re
 import requests
+import time
 from bs4 import BeautifulSoup
 
-def print_list(list):
+def print_list(list):   # 用于测试，将list中的数据分行打印
     for item in list:
         print(item)
 
 class ACM_Module(object):
     def __init__(self):
         object.__init__(self)
-        self.session = requests.Session()
+        self.session = requests.Session()       # 类的session
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
         }
-        self.session.headers.update(headers)
+        self.session.headers.update(headers)    # 加上浏览器模拟头
 
     def login(self, username, password):
+        """
+        用用户名和密码登陆HDOJ
+        :param username: 用户名
+        :param password: 密码
+        """
         url = 'http://acm.hdu.edu.cn/userloginex.php?action=login'
-        r = self.session.get(url)
-        cookie = r.cookies
-        #print(cookie[0][1])
 
         data = {
             'username': username,
@@ -31,16 +34,8 @@ class ACM_Module(object):
             'host': 'acm.hdu.edu.cn',
             'origin': 'http://acm.hdu.edu.cn',
             'referer': 'http://acm.hdu.edu.cn/'
-            #'cookie': cookie
         }
         r = self.session.post(url, data=data, headers=headers)
-        print(self.session.cookies.items())
-        #print(r.text)
-        #print(r.content)
-        userstatus_url = 'http://acm.hdu.edu.cn/userstatus.php?user=' + username
-        r = self.session.get(userstatus_url)
-        #print(r.text)
-        #print(r.cookies)
 
     def submit(self, problemID, code, language=0):
         """
@@ -57,6 +52,7 @@ class ACM_Module(object):
         :param code: 需要提交的代码
         """
         url = 'http://acm.hdu.edu.cn/submit.php?action=submit'
+        code = code.encode('utf-8').decode()
         data = {
             'check': '0',
             'problemid': str(problemID),
@@ -67,11 +63,8 @@ class ACM_Module(object):
             'Connect-Type': 'application/x-www-form-urlencoded'
         }
         se = self.session
-        print(se.cookies.items())
-        #print(se.headers.items())
+        print('submitting problem: ', problemID)
         r = self.session.post(url, data=data, headers=headers)
-        print(r.cookies.items())
-        #print(r.text)
 
     def getsolved(self, username):
         """
@@ -82,22 +75,15 @@ class ACM_Module(object):
         url = 'http://acm.hdu.edu.cn/userstatus.php?user=%s' % username
         solved = []
         r = self.session.get(url)
-
-        f = open('temp.html', 'wb')
-        f.write(r.text.encode('utf-8'))
-        f.close()
         # 解析出含有所有已完成题目号的字符串solvedstr
         soup = BeautifulSoup(r.text, 'html.parser')
         result = soup.find('p', align='left')
         solvedstr = result.text.split(';')
-        #print_list(solved1)
         # 从solvedstr中解析出一个list，含有所有完成题目号码
         for item in solvedstr:
             if item:
-                item = re.search(r'\d{4}', item)
-                #print(item.group(0))
+                item = re.search(r'\d{4}', item)    # 匹配4个数字
                 solved.append(item.group(0))
-        print(solved)
         return solved
 
     def getdiscuss(self, problemID):
@@ -110,30 +96,98 @@ class ACM_Module(object):
         solutions = []
         solutionurls = []
 
-        r = self.session.get(url)
-
-        f = open('temp.html', 'wb')
-        f.write(r.text.encode('utf-8'))
-        f.close()
-
         soup = BeautifulSoup(r.text, 'html.parser')
         res = []
-        res = soup.find_all('a', href=re.compile('\./post/reply\.php\?postid=\d+&messageid=1&deep=0'))
-        #print_list(res)
+        res = soup.find_all('a', href=re.compile('\./post/reply\.php\?postid=\d+&messageid=1&deep=0'))  # 用正则表达式根据url的规律解析答案discuss页的url
+        # 对于每一个找到的url，拼接成完整的url
         for item in res:
             item = item['href']
             item = item[1:]     # 将点截掉
-            #print(item)
             solutionurls.append('http://acm.hdu.edu.cn/discuss/problem%s' % item)  # 拼接url
-        print_list(solutionurls)
 
+        for url in solutionurls:
+            r = self.session.get(url)       # get每个完整的url
+            soup = BeautifulSoup(r.text, 'html.parser')
+            disshow = soup.find('pre', id='disshow').text   # 找到代码所在的tag，获取text
+
+            diss = re.search(re.compile(r'#include.+', re.S), disshow)     # re.S 开启多行模式匹配###中间可能有空格什么的
+            if diss:
+                solutions.append(diss.group())      # 将代码存到要返回的list中
         return solutions
+
+    def getbaidu(self, problemID):
+        """
+        从百度搜索题号，获取csdn博客中的题解
+        :param problemID: 题号
+        :return: 一个list，可能包含数个题解
+        """
+        solutions = []
+        solutionurls = []
+        url = r'http://www.baidu.com/s?wd=hdu%20' + str(problemID)      # 用题号拼接url
+
+        baidusession = requests.Session()       # 新建一个用于百度搜索的session
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
+        baidusession.headers.update(headers)
+        r = baidusession.get(url)
+
+        soup = BeautifulSoup(r.text, 'html.parser')
+        res = soup.find_all('a', attrs={'target': '_blank', 'class': 'c-showurl',
+                                  'style': 'text-decoration:none;'})
+        for item in res:
+            if re.match('blog.csdn.net', item.text):
+                solutionurls.append(item['href'])
+
+        for item in solutionurls:
+            r = baidusession.get(item)
+
+            soup = BeautifulSoup(r.text, 'html.parser')
+            code = soup.find(attrs={'name': 'code', 'class': 'cpp'})
+            if code:
+                # 先验证博客标题，如果标题包含题号，则继续
+                title = soup.find('span', class_='link_title')
+                pos = (title.text).find(str(problemID))
+                if pos == -1:     # 若果不包含题号，break
+                    break
+                solutions.append(code.text)
+
+        print(problemID, 'solutions finded: ', len(solutions))
+        return solutions
+
+    def autorun(self, start=1000, end=5639, interval=5):
+        """
+        开始运行AC自动机
+        :param start: 开始题号
+        :param end: 结束题号
+        :param interval: 每次提交设置间隔时间
+        """
+        language = 0
+        for problemID in range(start, end):
+            # 先判断是否已经ac
+            if str(problemID) not in c.getsolved(user):
+                print(problemID, 'is not AC, start solving it...')
+                # 解决这道没有AC的题目
+                answers = c.getbaidu(problemID)
+                if answers:
+                    for answer in answers:
+                        if str(problemID) not in c.getsolved(user):
+                            # 判断语言
+                            if answer.find('iostream') != -1:
+                                language=2
+                            elif answer.find('cstdio') != -1:
+                                language=2
+                            elif answer.find('stdio.h') != -1:
+                                language=0
+                            else:
+                                print('language=???')
+                                continue
+                            print('language=', language)
+                            c.submit(problemID, answer, language=language)
+                            time.sleep(interval)
+                        else:
+                            break
 
 if __name__ == '__main__':
     c = ACM_Module()
-    c.login('RunnerUp', '621374as')
-    code0 = r'''#include <stdio.h>
-    main(){int A,B;while(scanf("%d%d",&A,&B)!=EOF){printf("%d\n",A+B);}}'''
-    #c.submit(1000, code0, language=3)
-    #c.getsolved('hanzichi')
-    c.getdiscuss(1236)
+    user = 'RunnerUp'
+    c.login(user, 'runnerup')
+    c.autorun(start=1183)
