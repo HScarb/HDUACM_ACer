@@ -153,6 +153,24 @@ class ACM_Module(object):
         print(problemID, 'solutions finded: ', len(solutions))
         return solutions
 
+    def getacweb(self, problemID):
+
+        url = 'http://accepted.com.cn/hdoj%s/' % str(problemID)
+        acsession = requests.Session()
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
+        acsession.headers.update(headers)
+        r = acsession.get(url)
+        #f = open('temp.html', 'wb')
+        #f.write(r.text.encode('utf-8'))
+        #f.close()
+        soup = BeautifulSoup(r.text, 'html.parser')
+        res = soup.find('textarea', attrs={'wrap': 'soft', 'class': 'crayon-plain print-no', 'data-settings': 'dblclick'})
+        #print(res.text)
+        if res:
+            return res.text
+        else:
+            return None
+
     def autorun(self, start=1000, end=5639, interval=5):
         """
         开始运行AC自动机
@@ -186,8 +204,37 @@ class ACM_Module(object):
                         else:
                             break
 
+    def autorunac(self, start=1000, end=5639, interval=5):
+        language = 0
+        for problemID in range(start, end):
+            # 先判断是否已经ac
+            if str(problemID) not in c.getsolved(user):
+                print(problemID, 'is not AC, start solving it...')
+                # 解决这道没有AC的题目
+                time.sleep(3)
+                answer = c.getacweb(problemID)
+                if answer:
+                    if str(problemID) not in c.getsolved(user):
+                        # 判断语言
+                        if answer.find('stdio.h') != -1:
+                            language=2
+                        elif answer.find('cstdio') != -1:
+                            language=2
+                        elif answer.find('iostream') != -1:
+                            language=0
+                        else:
+                            print('language=???')
+                            continue
+                        print('language=', language)
+                        c.submit(problemID, answer, language=language)
+                        time.sleep(interval)
+                    else:
+                        break
+
 if __name__ == '__main__':
     c = ACM_Module()
     user = 'RunnerUp'
     c.login(user, 'runnerup')
-    c.autorun(start=1183)
+    #c.autorun(start=1002)
+    #c.getacweb(1000)
+    c.autorunac(start=3532)
