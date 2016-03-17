@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../HDOJ_Submitter/.idea/HDOJ_Submitter.iml" filepath="$PROJECT_DIR$/../HDOJ_Submitter/.idea/HDOJ_Submitter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/HDUACM_ACer.iml" filepath="$PROJECT_DIR$/.idea/HDUACM_ACer.iml" />
     </modules>
   </component>

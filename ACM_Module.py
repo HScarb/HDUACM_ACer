@@ -86,6 +86,42 @@ class ACM_Module(object):
                 solved.append(item.group(0))
         return solved
 
+    def getstatus(self, username):
+        class Status(object):
+            def __init__(self, list):
+                self.sub_time = list[1]
+                self.status = list[2]
+                self.proID = list[3]
+                self.time = list[4]
+                self.memory = list[5]
+                self.len = list[6]
+                self.lan = list[7]
+            def print(self):
+                print('sub_time: ',self. sub_time)
+                print('status: ', self.status)
+                print('proID: ', self.proID)
+                print('time: ', self.time)
+                print('memory: ', self.memory)
+                print('len: ', self.len)
+                print('lan: ', self. lan)
+            def print_status(self):
+                print('status: ', self.status)
+
+        url = 'http://acm.hdu.edu.cn/status.php?user=%s' % username
+        status = {}
+        r = self.session.get(url)
+
+        soup = BeautifulSoup(r.text, 'html5lib')
+        soup = soup.find('table', attrs={'width': '100%', 'border': '0', 'align': 'center', 'cellspacing': '2'})
+        soup = soup.find('tbody')
+        soup = soup.find('tr', align='center')
+        soup = soup.find_all('td')
+        txtlist = []
+        for item in soup:
+            txtlist.append(item.text)
+        s = Status(txtlist)
+        return s
+
     def getdiscuss(self, problemID):
         """
         获取discuss中的题解
@@ -235,6 +271,7 @@ if __name__ == '__main__':
     c = ACM_Module()
     user = 'RunnerUp'
     c.login(user, 'runnerup')
+    c.getstatus('RunnerUp')
     #c.autorun(start=1002)
     #c.getacweb(1000)
-    c.autorunac(start=3532)
+    #c.autorunac(start=3532)

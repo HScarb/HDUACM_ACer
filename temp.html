@@ -1,296 +1,103 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    
-    
-    
-<meta charset="UTF-8">
-    <meta name="alexaVerifyID" content="heWd6hllJXL7gThSqtxqom1mU2Q"/> 
-<meta name="description" content="Accepted题解网，提供POJ、HDOJ、ZOJ等著名OJ AC代码，大家交流学习" /> 
-<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="google-site-verification" content="hP3jKqGXJuFjwvfT8rRa0XBfaF_DEMbM2_CWwb3H-ZE" />
-<!--<title>HDOJ1000-A + B Problem | Accepted题解网</title>-->
-<title>HDOJ1000-A + B Problem  |  Accepted题解网</title>
-    <!--echo get_option('blogname'); if (is_home ()) echo get_option('blogdescription'); if ($paged > 1) echo '-Page ', $paged;-->
-<script>
-window._deel = {
-    name: 'Accepted题解网',
-    url: 'http://accepted.com.cn/wp-content/themes/D8',
-    rss: '',
-    ajaxpager: '',
-    maillist: '',
-    maillistCode: '',
-    commenton: 1,
-    roll: [0,0]
-}
-</script>
+<html><head><meta http-equiv=refresh content=100><meta name=keywords content="HDOJ ACM ICPC OJ C C++ Pascal Java"><meta http-equiv=Content-Type content="text/html;charset=gb2312"><link rel=stylesheet type=text/css href="/images/global.css" media=all><link rel=stylesheet type=text/css href="/css/diyinhead.css" media=all><link rel=stylesheet type=text/css href="/css/webinhead.css" media=all><script src="/js/global.js" type=text/javascript></script><script src="/js/register.js" type=text/javascript></script><script src="/js/MathJax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><title>Realtime Status</title></head><body >
+<a name=top></a>
+<table align=center cellSpacing=0 cellPadding=0 width=980 border=0 style="word-wrap:break-word">
+<tr>
+	<td style="border:#1A5CC8 1px solid" align=center width=100%>
+		<a href="/">
+			<img src="/images/banner.jpg" width="100%" height=116 border=0>
+		</a>
+	</td>
+</tr>
+<tr>
+	<td style="border:#1A5CC8 1px solid">
+	<table cellSpacing=0 cellPadding=1 width="979px">
+	<tr bgcolor=#1A5CC8 align=center class=banner height=25>
+		<td>Online Judge</td>
+		<td>Online Exercise</td>
+		<td>Online Teaching</td>
+		<td>Online Contests</td>
+	<td>Exercise Author</td>
+	</tr>
+	<tr style="font-size:16px" align=center>
+		<td width=20% valign=top>
+		<a href="/faq.php" style="text-decoration: none">F.A.Q</a><br>
+		<a href="/friends" style="text-decoration: none">Hand In Hand</a><br>
+		<a href="/onlineuser.php" style="text-decoration: none">Online Acmers</a>	<br>
+		<!-- /onlineuser.php-->
+		
+		<a href="/forum" style="text-decoration: none">Forum | </a><a href="/discuss/public/list.php" style="text-decoration: none">Discuss</a><br>
+		<a href="/statistic/submit_graph.php" style="text-decoration: none">Statistical Charts</a><br>
+		</td>
+		<td width=20% valign=top>
+		<form action="/search.php" method=get>
+		<a href="/listproblem.php?vol=1" style="text-decoration: none">Problem Archive</a><br/>
+		<!--<a href="http://feeds.feedburner.com/Hdoj-problemset"><img src="/images/rss1.jpg" alt="problemset" style="vertical-align:text-bottom;"width=20 height=20></a><br>-->
+		<!--
+			 <a href="/submit.php">Submit Solution</a><br>
+		-->	
+		<a href="/status.php" style="text-decoration: none">Realtime Judge Status</a><br>
 
-<!-- All in One SEO Pack 2.2.6.2 by Michael Torbert of Semper Fi Web Design[514,557] -->
-<meta name="description" itemprop="description" content="&nbsp; Problem Description Calculate A + B. Input Each line will contain two integers A and B. Process to end of file. Output For each case, output A" />
+		<a href="/ranklist.php" style="text-decoration: none">Authors Ranklist</a><br>
+		<input name=field value=author type=hidden><input class=text60 name=key>&nbsp;<input class=button40 type=submit value=Search>
+		
+		<!--
+			<input name=field value=problem type=hidden><input class=text60 name=key>&nbsp;<input class=button40 type=submit value=Search>
+		-->
+		</form>
+		</td>
+		<td width=20% valign=top>
+		 <form action='/search.php' method=get> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none" href="http://code.hdu.edu.cn/">C/C++/Java Exams &nbsp;&nbsp;&nbsp;&nbsp;</a><br/>
+		<a style="text-decoration: none" href="/game">ACM Steps</a><br/>
+		<a href = "/ITJobs/">Go to Job</a><br/>	
+		<a href="/livecast" style="text-decoration: none">Contest LiveCast</a><br/>
+		<a style="text-decoration: none" href="/region">ICPC@China</a><br/>
+		<!-- <a href="/register.php">Register New Author</a><br> -->
+		<!-- <a href="/modifyuser.php">Update Your Information</a><br> -->
+		</form>
+		</td>
+		<td width=20% valign=top>
+		<a href="http://bestcoder.hdu.edu.cn" style="text-decoration: none; color: red; font-weight: bold;">Best Coder <sup style="color: gray;">beta</sup></a><br/><a href="/vip/contest_list.php" style="text-decoration: none">VIP</a> | <a href="/contests/contest_list.php" style="text-decoration: none">STD Contests</a><br /><a href="http://code.hdu.edu.cn/vcontest" style="text-decoration: none">Virtual Contests </a><br/>&nbsp;&nbsp;<a href="/diy/contest_list.php" style="text-decoration: none">&nbsp;&nbsp;DIY | </a><a href="/webcontest" style="text-decoration: none"><font color="">Web-DIY</font> <font size=1 color="gray"><sup>beta</sup></font></a><br/><a style="text-decoration: none" href="/recentcontest">Recent Contests</a><br/>		</td>
+		<td width=20%>
+		<div align=left style="font-size:16px;width:150px"><a href="/userstatus.php?user=RunnerUp" style="text-decoration: none"><img alt="Author" src="/images/user.png" border=0 height=18 width=18> RunnerUp</a><br><b style="font-family:Arial;font-size:16px"><a href="/listmsg.php" style="text-decoration: none"><img alt="Mail" src="/images/mail.png" border=0 height=18 width=18> Mail 0</a><a href="/listmsg.php?type=new" style="text-decoration: none">(<font color=red>0</font>)</a></b><br><a href="/control_panel.php" style="text-decoration: none"><img src="/images/panel.jpg" alt="Control Panel" border=0 height=18 width=18> Control Panel </a><br><a href="/userloginex.php?action=logout" style="text-decoration: none"><img src="/images/signout.png" alt="Sign Out" border=0 height=18 width=18> Sign Out</a></div>		</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div align=center id=rollword><marquee scrollamount=2 width=600 scrolldelay=30 onMouseOver="javascript:this.stop();" onMouseOut="javascript:this.start();"><b style="margin-right:20px"><a href="http://acm.hdu.edu.cn/ITJobs/index.php" style="color:red" target=_blank>ÕÐÆ¸¡ª¡ªÓ¢ÐÛ»¥Óé£¨º¼ÖÝ£©</a>
 
-<meta name="keywords" itemprop="keywords" content="hdoj" />
 
-<link rel="canonical" href="http://accepted.com.cn/hdoj1000/" />
-<meta property="og:title" content="HDOJ1000-A + B Problem | Accepted题解网" />
-<meta property="og:type" content="activity" />
-<meta property="og:url" content="http://accepted.com.cn/hdoj1000/" />
-<meta property="og:image" content="http://accepted.com.cn/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
-<meta property="og:site_name" content="Accepted题解网" />
-<meta property="og:description" content="&nbsp; Problem Description Calculate A + B.  Input Each line will contain two integers A and B. Process to end of file.  Output For each case, output A + B in one line.  Sample Input  1 1   Sample Output  2" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="&nbsp; Problem Description Calculate A + B.  Input Each line will contain two integers A and B. Process to end of file.  Output For each case, output A + B in one line.  Sample Input  1 1   Sample Output  2" />
-<meta itemprop="image" content="http://accepted.com.cn/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
-<!-- /all in one seo pack -->
-<link rel='stylesheet' id='crayon-css'  href='http://accepted.com.cn/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.7.0' type='text/css' media='all' />
-<link rel='stylesheet' id='crayon-theme-classic-css'  href='http://accepted.com.cn/wp-content/plugins/crayon-syntax-highlighter/themes/classic/classic.css?ver=2.7.0' type='text/css' media='all' />
-<link rel='stylesheet' id='crayon-font-monaco-css'  href='http://accepted.com.cn/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=2.7.0' type='text/css' media='all' />
-<link rel='stylesheet' id='style-css'  href='http://accepted.com.cn/wp-content/themes/D8/style.css?ver=3.0' type='text/css' media='all' />
-<script type='text/javascript' src='http://accepted.com.cn/wp-content/themes/D8/js/jquery.js?ver=3.0'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var CrayonSyntaxSettings = {"version":"2.7.0","is_admin":"0","ajaxurl":"http:\/\/accepted.com.cn\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
-var CrayonSyntaxStrings = {"copy":"\u4f7f\u7528 %s \u590d\u5236\uff0c\u4f7f\u7528 %s \u7c98\u8d34\u3002","minimize":"\u70b9\u51fb\u5c55\u5f00\u4ee3\u7801"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://accepted.com.cn/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.7.0'></script>
-<link rel='prev' title='POJ2560-Freckles' href='http://accepted.com.cn/poj2560/' />
-<link rel='next' title='HDOJ1001-Sum Problem' href='http://accepted.com.cn/hdoj1001/' />
-<link rel='shortlink' href='http://accepted.com.cn/?p=3074' />
-<meta name="keywords" content="hdoj, HDOJ">
-<meta name="description" content="&nbsp; Problem Description Calculate A + B.  Input Each line will contain two integers A and B. Process to end of file.  Output For each case, output A + B in one line.  Sample Input  1 1   Sample Output  2      [crayon-">
-<!--[if lt IE 9]><script src="http://accepted.com.cn/wp-content/themes/D8/js/html5.js"></script><![endif]-->
-</head>
-<body class="single single-post postid-3074 single-format-standard">
-<header class="header">
-	<div class="navbar">
-		<div class="logo" style="width:154px"><a href="http://accepted.com.cn" title="Accepted题解网-">Accepted题解网</a></div>
-		<ul class="nav">
-			<li id="menu-item-19557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-19557"><a href="http://accepted.com.cn">Home</a></li>
-<li id="menu-item-20838" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20838"><a href="http://accepted.com.cn/category/hdoj/">HDOJ</a></li>
-<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="http://accepted.com.cn/category/poj/">POJ</a>
-<ul class="sub-menu">
-	<li id="menu-item-34996" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-34996"><a href="http://accepted.com.cn/category/poj_bailian/">BAILIAN</a></li>
-	<li id="menu-item-38616" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38616"><a href="http://accepted.com.cn/category/noi/">NOI</a></li>
-	<li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="http://accepted.com.cn/category/bailian/">程序设计导引及在线实践</a></li>
-</ul>
-</li>
-<li id="menu-item-20839" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20839"><a href="http://accepted.com.cn/category/zoj/">ZOJ</a></li>
-<li id="menu-item-26134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26134"><a href="http://accepted.com.cn/category/codeforces/">CODEFORCES</a></li>
-<li id="menu-item-2509" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2509"><a href="http://accepted.com.cn/category/othersources/">Other Sources</a>
-<ul class="sub-menu">
-	<li id="menu-item-23303" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23303"><a href="http://accepted.com.cn/category/51nod/">51NOD</a></li>
-	<li id="menu-item-45715" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45715"><a href="http://accepted.com.cn/category/acm-icpc-live-archive/">ACM-ICPC Live Archive</a></li>
-	<li id="menu-item-21380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21380"><a href="http://accepted.com.cn/category/bzoj/">BZOJ</a></li>
-	<li id="menu-item-36083" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36083"><a href="http://accepted.com.cn/category/codevs/">CODEVS</a></li>
-	<li id="menu-item-42678" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42678"><a href="http://accepted.com.cn/category/e-olymp/">E-olymp</a></li>
-	<li id="menu-item-16362" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16362"><a href="http://accepted.com.cn/category/jobdu/">JOBDUOJ</a></li>
-	<li id="menu-item-15295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15295"><a href="http://accepted.com.cn/category/leetcode/">LeetCode OJ</a></li>
-	<li id="menu-item-22462" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22462"><a href="http://accepted.com.cn/category/lightoj/">LIGHTOJ</a></li>
-	<li id="menu-item-42981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42981"><a href="http://accepted.com.cn/category/luogu/">Luogu</a></li>
-	<li id="menu-item-43726" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43726"><a href="http://accepted.com.cn/category/nyist/">NYIST</a></li>
-	<li id="menu-item-21536" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21536"><a href="http://accepted.com.cn/category/sgu/">SGU</a></li>
-	<li id="menu-item-20857" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20857"><a href="http://accepted.com.cn/category/spoj/">SPOJ</a></li>
-	<li id="menu-item-42459" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42459"><a href="http://accepted.com.cn/category/tyvj/">TYVJ</a></li>
-	<li id="menu-item-21560" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21560"><a href="http://accepted.com.cn/category/vijos/">VIJOS</a></li>
-	<li id="menu-item-14722" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14722"><a href="http://accepted.com.cn/category/uva/">UVA</a></li>
-</ul>
-</li>
-<li id="menu-item-30738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30738"><a href="http://accepted.com.cn/friendlink/">FriendLinks</a></li>
-		</ul>
-		<div class="menu pull-right">
-			<form method="get" class="dropdown search-form" action="http://accepted.com.cn/" >
-				<input class="search-input" name="s" type="text" placeholder="输入关键字搜索" autofocus="" x-webkit-speech=""><input class="btn btn-success search-submit" type="submit" value="搜索">
-				<ul class="dropdown-menu search-suggest"></ul>
-			</form>
-			<div class="btn-group pull-left">
-				<button class="btn btn-primary" data-toggle="modal" data-target="#feed">订阅</button>
-							</div>
-		</div>
-	</div>
-	<div class="speedbar">
-				<div class="toptip"><strong class="text-success">最新消息：</strong></div>
-	</div>
-</header>
-<section class="container">
-	<div class="banner banner-site"><script>QIHOO_UNION_SLOT={w:960, h:90, ls:"s6c9659dd7d",t: "link"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
-</div><div class="content-wrap">
-	<div class="content">
-		<div class="breadcrumbs">你的位置：<a href="http://accepted.com.cn">Accepted题解网</a> <small>></small> <a href="http://accepted.com.cn/category/hdoj/" title="查看 HDOJ 中的全部文章">HDOJ</a> <small>></small> <span class="muted">HDOJ1000-A + B Problem</span></div>
-				<header class="article-header">
-			<h1 class="article-title"><a href="http://accepted.com.cn/hdoj1000/">HDOJ1000-A + B Problem</a></h1>
-			<div class="meta">
-				<span class="muted"><a href="http://accepted.com.cn/category/hdoj/"><i class="icon-list-alt icon12"></i> HDOJ</a></span>				<span class="muted"><i class="icon-user icon12"></i> <a href="http://accepted.com.cn/author/admin/">admin</a></span>
-				<time class="muted"><i class="ico icon-time icon12"></i> 8个月前 (07-20)</time>
-				<span class="muted"><i class="ico icon-eye-open icon12"></i> 183浏览</span>
-				<span class="muted"><i class="icon-comment icon12"></i> <a href="http://accepted.com.cn/hdoj1000/#comments">0评论</a></span>							</div>
-		</header>
 
-		<div class="banner banner-post"><script type="text/javascript">var jd_union_unid="262760006",jd_ad_ids="505:6",jd_union_pid="CIyl5NvPKRDGzKV9GgAgr/XLiQEqAA==";var jd_width=960;var jd_height=90;var jd_union_euid="";</script>
-<script type="text/javascript" charset="utf-8" src="http://u.x.jd.com/static/js/auto.js"></script>
-
+</b></marquee></div>	</td>
+</tr>
+<tr><td><div id=fixed_table><a name=status></a><h1>Realtime Status</h1><table width=100% border=0 align=center cellspacing=2 style="border-bottom:#879BFF 1px dashed" class=table_text><tr bgcolor=#1A5CC class=table_header> <td height=22 width=8%>Run ID</td><td width=15%>Submit Time</td><td>Judge Status</td><td width=50>Pro.ID</td><td width=74>Exe.Time</td><td width=90>Exe.Memory</td><td width=76>Code Len.</td><td width=80>Language</td><td width=16%>Author</td></tr><form action="/status.php" method=get style="margin-bottom:0px"><left>From <input name=first type=text style="width:70px;" maxlength=10 class=text40 value=""> Problem ID <input name=pid type=text maxlength=5 class=text40 value=""> Author <input name=user type=text maxlength=20 class=text60 value="Scarb"> Language <span style="overflow:hidden;width:80px;height:22px;border:#879BFF 1px dashed"><select name="lang" style="margin:-1px;width:81px;font-family:Arial;font-size:14px;height:22px"><option value='0' selected>All</option><option value='1'>G++</option><option value='2'>GCC</option><option value='3'>C++</option><option value='4'>C</option><option value='5'>Pascal</option><option value='6'>Java</option><option value='7'>C#</option></select></span> Status <span style="overflow:hidden; width:157px;height:22px;border:#879BFF 1px dashed"><select name=status style="font-family:Arial;font-size:14px;width:158px;height:23px;margin:-1"><option value='0' selected>All</option><option value='5'>Accepted</option><option value='6'>Wrong Answer</option><option value='8'>Presentation Error</option><option value='12'>Compilation Error</option><option value='7'>Runtime Error</option><option value='9'>Time Limit Exceeded</option><option value='10'>Memory Limit Exceeded</option><option value='11'>Output Limit Exceeded</option></select></span> <input type=submit value=Go class=button40 style="height:22px;margin-top:-3px"></center></form></td></tr><tr align=center ><td height=22px>16561199</td><td>2016-03-15 15:39:45</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1222">1222</a></td><td>0MS</td><td>1600K</td><td>319B</td><td>G++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>16559729</td><td>2016-03-15 12:12:04</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1222">1222</a></td><td>0MS</td><td>1596K</td><td>339B</td><td>G++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>16487893</td><td>2016-03-09 16:04:23</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1997">1997</a></td><td>15MS</td><td>1788K</td><td>875B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>16487769</td><td>2016-03-09 15:50:48</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1997">1997</a></td><td>15MS</td><td>1780K</td><td>812B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>16487338</td><td>2016-03-09 14:59:21</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1997">1997</a></td><td>15MS</td><td>1784K</td><td>606B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>16449547</td><td>2016-03-06 12:55:49</td><td><a href="/vi
+				ewerror.php?rid=16449547" target=_blank><font color=#6633FF>Compilation Error</font></a></td><td><a href="/showproblem.php?pid=1236">1236</a></td><td>0MS</td><td>0K</td><td>1100B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>16449156</td><td>2016-03-06 11:53:59</td><td><a href="/vi
+				ewerror.php?rid=16449156" target=_blank><font color=#6633FF>Compilation Error</font></a></td><td><a href="/showproblem.php?pid=1236">1236</a></td><td>0MS</td><td>0K</td><td>1900B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>16413647</td><td>2016-03-02 23:24:16</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1443">1443</a></td><td>124MS</td><td>1600K</td><td>792B</td><td>G++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>16413532</td><td>2016-03-02 23:11:21</td><td><a href="/vi
+				ewerror.php?rid=16413532" target=_blank><font color=#6633FF>Compilation Error</font></a></td><td><a href="/showproblem.php?pid=1443">1443</a></td><td>0MS</td><td>0K</td><td>594B</td><td>GCC</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>16413525</td><td>2016-03-02 23:11:15</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1443">1443</a></td><td>140MS</td><td>1796K</td><td>594B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>16413515</td><td>2016-03-02 23:11:01</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1443">1443</a></td><td>93MS</td><td>1600K</td><td>594B</td><td>G++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>16413496</td><td>2016-03-02 23:10:24</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1443">1443</a></td><td>156MS</td><td>1792K</td><td>597B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>16413319</td><td>2016-03-02 22:42:51</td><td><font color=green>Time Limit Exceeded</font></td><td><a href="/showproblem.php?pid=1443">1443</a></td><td>1000MS</td><td>20108K</td><td>1131B</td><td>G++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr bgcolor=#D7EBFF align=center ><td height=22px>15881303</td><td>2015-12-16 23:59:56</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1427">1427</a></td><td>218MS</td><td>1776K</td><td>1613B</td><td>C++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr><tr align=center ><td height=22px>15881296</td><td>2015-12-16 23:59:47</td><td><font color=red>Accepted</font></td><td><a href="/showproblem.php?pid=1427">1427</a></td><td>358MS</td><td>1584K</td><td>1613B</td><td>G++</td><td class=fixedsize><a href="/userstatus.php?user=Scarb">¸ÉËÀ»ÆÐñ¶«</a></td></tr></table><p align=center class=footer_link><a style="margin-right:20px" href="/status.php?user=Scarb&pid=0&lang=0&status=0#status"><< First Page</a><a style="margin-right:20px" href="/status.php?last=16561200&user=Scarb&pid=&lang=&status=#status">< Prev Page</a><a style="margin-right:20px" href="/status.php?first=15881295&user=Scarb&pid=&lang=&status=#status">Next Page ></a><a href="/status.php?last=1&user=Scarb&pid=&lang=&status=#status">Last Page >></a></p></div>
+<tr>
+<td>
+	<table style="border:#1A5CC8 1px solid; font-size:14px" cellSpacing=0 cellPadding=1 width=100%>
+	<tr align=center>
+		<td class=footer_link height=45><a href="/">Home</a> | <a href=#top>Top</a></td>
+		<td style="padding:6px">
+			Hangzhou Dianzi University Online Judge 3.0<br>
+			Copyright &copy; 2005-2016 <a href=mailto:acm@hdu.edu.cn>HDU ACM Team</a>. All Rights Reserved.<br>
+			<a href="../about_us/developer.php">Designer & Developer </a>: <a>Wang Rongtao</a>&nbsp<a>LinLe</a>&nbsp<a href=mailto:gjavac@gmail.com >GaoJie</a>&nbsp<a href=mailto:gl8997@gmail.com >GanLu</a><br>
+			<span class=pagerunstatus>Total 0.124800(s) query 2, Server time : 2016-03-17 11:56:08, Gzip enabled</span>		</td>
+		<td class=footer_link>
+			<!-- <a href="javascript:history.go(-1);">Back</a> | <a href="javascript:history.forward();">Forward</a>-->
+			<a href="/admin">Administration</a>	
+		</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
 <script type="text/javascript">
-        document.write('<a style="display:none!important" id="tanx-a-mm_54142854_9388102_31856578"></a>');
-        tanx_s = document.createElement("script");
-        tanx_s.type = "text/javascript";
-        tanx_s.charset = "gbk";
-        tanx_s.id = "tanx-s-mm_54142854_9388102_31856578";
-        tanx_s.async = true;
-        tanx_s.src = "http://p.tanx.com/ex?i=mm_54142854_9388102_31856578";
-        tanx_h = document.getElementsByTagName("head")[0];
-        if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1254072405'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254072405%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+	document.getElementById('cnzz_stat_icon_1254072405').style.display = 'none';
 </script>
-
-</div>		
-		<article class="article-content">
-            		
-			<p>&nbsp;</p>
-<div align="left">Problem Description</div>
-<div>Calculate <em>A + B</em>.</div>
-<div></div>
-<div align="left">Input</div>
-<div>Each line will contain two integers <em>A</em> and <em>B</em>. Process to end of file.</div>
-<div></div>
-<div align="left">Output</div>
-<div>For each case, output <em>A + B</em> in one line.</div>
-<div></div>
-<div align="left">Sample Input</div>
-<div>
-<div>1 1</div>
-</div>
-<div></div>
-<div align="left">Sample Output</div>
-<div>
-<div>2</div>
-</div>
-<div></div>
-<div>
-<p></p><!-- Crayon Syntax Highlighter v2.7.0 -->
-
-		<div id="crayon-56e3a3d47a127164078279" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
-		
-			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
-			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="复制代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div><span class="crayon-language">C++</span></div></div>
-			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
-			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
-#include &lt;cstdio&gt; 
-#include &lt;iostream&gt; 
-using namespace std;
-int main() 
-{ 
-    int a,b;
-    while(cin&gt;&gt;a&gt;&gt;b)
-        cout&lt;&lt;a+b&lt;&lt;endl;
-    return 0;
-}</textarea></div>
-			<div class="crayon-main" style="">
-				<table class="crayon-table">
-					<tr class="crayon-row">
-				<td class="crayon-nums " data-settings="show">
-					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-56e3a3d47a127164078279-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-56e3a3d47a127164078279-2">2</div><div class="crayon-num" data-line="crayon-56e3a3d47a127164078279-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-56e3a3d47a127164078279-4">4</div><div class="crayon-num" data-line="crayon-56e3a3d47a127164078279-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-56e3a3d47a127164078279-6">6</div><div class="crayon-num" data-line="crayon-56e3a3d47a127164078279-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-56e3a3d47a127164078279-8">8</div><div class="crayon-num" data-line="crayon-56e3a3d47a127164078279-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-56e3a3d47a127164078279-10">10</div></div>
-				</td>
-						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-56e3a3d47a127164078279-1"><span class="crayon-p">#include &lt;cstdio&gt; </span></div><div class="crayon-line crayon-striped-line" id="crayon-56e3a3d47a127164078279-2"><span class="crayon-p">#include &lt;iostream&gt; </span></div><div class="crayon-line" id="crayon-56e3a3d47a127164078279-3"><span class="crayon-r">using</span><span class="crayon-h"> </span><span class="crayon-t">namespace</span><span class="crayon-h"> </span><span class="crayon-v">std</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-56e3a3d47a127164078279-4"><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-e">main</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-56e3a3d47a127164078279-5"><span class="crayon-sy">{</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-56e3a3d47a127164078279-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-v">a</span><span class="crayon-sy">,</span><span class="crayon-v">b</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-56e3a3d47a127164078279-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">while</span><span class="crayon-sy">(</span><span class="crayon-v">cin</span><span class="crayon-o">&gt;&gt;</span><span class="crayon-v">a</span><span class="crayon-o">&gt;&gt;</span><span class="crayon-v">b</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-56e3a3d47a127164078279-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">cout</span><span class="crayon-o">&lt;&lt;</span><span class="crayon-v">a</span><span class="crayon-o">+</span><span class="crayon-v">b</span><span class="crayon-o">&lt;&lt;</span><span class="crayon-v">endl</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-56e3a3d47a127164078279-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-56e3a3d47a127164078279-10"><span class="crayon-sy">}</span></div></div></td>
-					</tr>
-				</table>
-			</div>
-		</div>
-<!-- [Format Time: 0.0041 seconds] -->
-<p>
-</p></div>
-<div style=float:left><!-- JiaThis Button BEGIN -->
-<div id="jiathis_style_32x32">
-	<a class="jiathis_button_qzone"></a>
-	<a class="jiathis_button_tsina"></a>
-	<a class="jiathis_button_tqq"></a>
-	<a class="jiathis_button_renren"></a>
-	<a class="jiathis_button_kaixin001"></a>
-	<a href="http://www.jiathis.com/share/" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END --></div><p>转载请注明：<a href="http://accepted.com.cn">Accepted题解网</a> &raquo; <a href="http://accepted.com.cn/hdoj1000/">HDOJ1000-A + B Problem</a></p>                    
-		<div class="bd-reward-stl"><button id="bdRewardBtn"><span></span></button></div>
-        <script type="text/javascript" src="https://zz.bdstatic.com/zzdashang/js/bd-zz-reward.js"></script>
-            
-		</article>
-        
-
-        
-		
-		<footer class="article-footer">
-			<div class="article-tags">继续浏览有关 <a href="http://accepted.com.cn/tag/hdoj-2/" rel="tag">hdoj</a> 的文章</div>					</footer>
-
-		<nav class="article-nav">
-			<span class="article-nav-prev">上一篇 <a href="http://accepted.com.cn/poj2560/" rel="prev">POJ2560-Freckles</a></span>
-			<span class="article-nav-next"><a href="http://accepted.com.cn/hdoj1001/" rel="next">HDOJ1001-Sum Problem</a> 下一篇</span>
-		</nav>
-
-		<div class="relates">
-			<h3>与本文相关的文章</h3>
-			<ul>
-<li><a href="http://accepted.com.cn/hdoj5639/">HDOJ5639-Deletion</a></li><li><a href="http://accepted.com.cn/hdoj5638/">HDOJ5638-Toposort</a></li><li><a href="http://accepted.com.cn/hdoj5637/">HDOJ5637-Transform</a></li><li><a href="http://accepted.com.cn/hdoj5636/">HDOJ5636-Shortest Path</a></li><li><a href="http://accepted.com.cn/hdoj5635/">HDOJ5635-LCP Array</a></li><li><a href="http://accepted.com.cn/hdoj5632/">HDOJ5632-Rikka with Array</a></li><li><a href="http://accepted.com.cn/hdoj5634/">HDOJ5634-Rikka with Phi</a></li><li><a href="http://accepted.com.cn/hdoj5631/">HDOJ5631-Rikka with Graph</a></li><li><a href="http://accepted.com.cn/hdoj5630/">HDOJ5630-Rikka with Chess</a></li><li><a href="http://accepted.com.cn/hdoj5629/">HDOJ5629-Clarke and tree</a></li><li><a href="http://accepted.com.cn/hdoj5628/">HDOJ5628-Clarke and math</a></li><li><a href="http://accepted.com.cn/hdoj5627/">HDOJ5627-Clarke and MST</a></li></ul>		</div>
-
-		
-		<div id="respond" class="no_webshot">
-		<h3 class="queryinfo">
-		您必须 <a href="http://accepted.com.cn/wp-login.php?redirect_to=http%3A%2F%2Faccepted.com.cn%2Fhdoj1000%2F">登录</a> 才能发表评论！	</h3>
-	</div>
-
-		<div class="banner banner-comment"><script>QIHOO_UNION_SLOT={w:960, h:90, ls:"s6ecb66de79",t: "link"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
-<script type="text/javascript">
-    /*首页上端*/
-    var cpro_id = "u2353426";
-</script>
-
-
-
-</div>
-	</div>
-</div>
-<aside class="sidebar">	
-		<div class="widget widget_recent_entries">		<h3 class="widget_tit">近期文章</h3>		<ul>
-				<li><a href="http://accepted.com.cn/codeforces650e/" title="CODEFORCES650E-Clockwork Bomb">CODEFORCES650E-Clockwork Bomb</a></li>
-				<li><a href="http://accepted.com.cn/codeforces650a/" title="CODEFORCES650A-Watchmen">CODEFORCES650A-Watchmen</a></li>
-				<li><a href="http://accepted.com.cn/codeforces650b/" title="CODEFORCES650B-Image Preview">CODEFORCES650B-Image Preview</a></li>
-				<li><a href="http://accepted.com.cn/codeforces650c/" title="CODEFORCES650C-Table Compression">CODEFORCES650C-Table Compression</a></li>
-				<li><a href="http://accepted.com.cn/codeforces650d/" title="CODEFORCES650D-Zip-line">CODEFORCES650D-Zip-line</a></li>
-				</ul>
-		</div><div class="widget d_tag"><h3 class="widget_tit">标签云</h3><div class="d_tags"><a href="http://accepted.com.cn/tag/hdoj-2/">hdoj (3783)</a><a href="http://accepted.com.cn/tag/codeforces-2/">codeforces (2738)</a><a href="http://accepted.com.cn/tag/poj-2/">poj (2409)</a><a href="http://accepted.com.cn/tag/zoj-2/">zoj (2112)</a><a href="http://accepted.com.cn/tag/codevs-2/">codevs (1464)</a><a href="http://accepted.com.cn/tag/nyist-2/">Nyist (968)</a><a href="http://accepted.com.cn/tag/bzoj-2/">bzoj (886)</a><a href="http://accepted.com.cn/tag/luogu/">Luogu (721)</a><a href="http://accepted.com.cn/tag/noi/">NOI (570)</a><a href="http://accepted.com.cn/tag/bailian-2/">bailian (550)</a><a href="http://accepted.com.cn/tag/vijos-2/">vijos (510)</a><a href="http://accepted.com.cn/tag/jobduoj/">jobduoj (440)</a><a href="http://accepted.com.cn/tag/lightoj-2/">lightoj (416)</a><a href="http://accepted.com.cn/tag/uva-2/">uva (384)</a><a href="http://accepted.com.cn/tag/sgu-2/">sgu (294)</a><a href="http://accepted.com.cn/tag/leetcode-2/">Leetcode (281)</a><a href="http://accepted.com.cn/tag/51nod-2/">51nod (273)</a><a href="http://accepted.com.cn/tag/e-olymp/">E-olymp (259)</a><a href="http://accepted.com.cn/tag/tyvj-2/">tyvj (205)</a><a href="http://accepted.com.cn/tag/spoj-2/">spoj (112)</a><a href="http://accepted.com.cn/tag/%e7%99%be%e7%82%bc/">百炼 (92)</a><a href="http://accepted.com.cn/tag/array/">Array (66)</a><a href="http://accepted.com.cn/tag/string/">String (36)</a><a href="http://accepted.com.cn/tag/tree/">Tree (35)</a><a href="http://accepted.com.cn/tag/dynamic-programming/">Dynamic Programming (33)</a><a href="http://accepted.com.cn/tag/math/">Math (31)</a><a href="http://accepted.com.cn/tag/depth-first-search/">Depth-first Search (25)</a><a href="http://accepted.com.cn/tag/hash-table/">Hash Table (24)</a><a href="http://accepted.com.cn/tag/two-pointers/">Two Pointers (24)</a><a href="http://accepted.com.cn/tag/backtracking/">Backtracking (24)</a><a href="http://accepted.com.cn/tag/linked-list/">Linked List (23)</a><a href="http://accepted.com.cn/tag/binary-search/">Binary Search (22)</a><a href="http://accepted.com.cn/tag/acm-icpc-live-archive-2/">Acm-icpc-live-archive (22)</a><a href="http://accepted.com.cn/tag/stack/">Stack (15)</a><a href="http://accepted.com.cn/tag/breadth-first-search/">Breadth-first Search (13)</a><a href="http://accepted.com.cn/tag/database/">Database (13)</a><a href="http://accepted.com.cn/tag/bit-manipulation/">Bit Manipulation (11)</a><a href="http://accepted.com.cn/tag/sort/">Sort (10)</a><a href="http://accepted.com.cn/tag/divide-and-conquer/">Divide and Conquer (9)</a><a href="http://accepted.com.cn/tag/heap/">Heap (6)</a><a href="http://accepted.com.cn/tag/greedy/">Greedy (6)</a><a href="http://accepted.com.cn/tag/data-structure/">Data Structure (6)</a><a href="http://accepted.com.cn/tag/shell/">Shell (4)</a><a href="http://accepted.com.cn/tag/graph/">Graph (3)</a><a href="http://accepted.com.cn/tag/trie/">Trie (3)</a><a href="http://accepted.com.cn/tag/design/">Design (3)</a><a href="http://accepted.com.cn/tag/union-find/">Union Find (2)</a><a href="http://accepted.com.cn/tag/topological-sort/">Topological Sort (2)</a><a href="http://accepted.com.cn/tag/oj/">OJ (1)</a><a href="http://accepted.com.cn/tag/books/">books (1)</a><a href="http://accepted.com.cn/tag/how-to-use/">How-to-Use (1)</a></div></div><div class="widget widget_text"><h3 class="widget_tit">Sina Weibo</h3>			<div class="textwidget"><iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=3893288077&verifier=922a51eb&dpc=1"></iframe></div>
-		</div><div class="widget d_slidebanner"><div class="slider-wrap" style="height:280px;"><ul class="slider-roll"><li class="item"><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3Dc%2F0kyXVKWPwcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAmJ0R9j6AtsiM2CqctPx8scJ4SVJKX88QhjORgzWTm3LEuqSudOw%2BUorDFSmJy8RV%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K%2BnbtOD3UdznPV1H2z0iQv9NkKVMHClW0QbMqOpFMIvnvjQXzzpXdTHGJe8N%2FwNpGw%3D%3D"><img src="https://img.alicdn.com/imgextra/i3/910404070/TB2E4_8eXXXXXcgXpXXXXXXXXXX_!!910404070.gif"></a></li></ul></div></div><div class="widget widget_meta"><h3 class="widget_tit">功能</h3>			<ul>
-						<li><a href="http://accepted.com.cn/wp-login.php">登录</a></li>
-			<li><a href="http://accepted.com.cn/feed/" title="使用 RSS 2.0 订阅本站点内容">文章 <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-			<li><a href="http://accepted.com.cn/comments/feed/" title="使用 RSS 订阅本站点的所有文章的近期评论">评论 <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-			<li><a href="http://cn.wordpress.org/" title="基于 WordPress，一个优美、先进的个人信息发布平台。">WordPress.org</a></li>
-						</ul>
-</div></aside></section>
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="copyright pull-left">
-            版权所有，保留一切权利！ &copy; 2016 <a href="http://accepted.com.cn">Accepted题解网</a>   <a href="http://www.miibeian.gov.cn/" target="_blank">皖ICP备15003912号</a>
-            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255959721'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255959721%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-        </div>
-        <div class="trackcode pull-right">
-            <script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-            
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?2cc18845143cd04c9a2becb259ed3214";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-        </div>
-    </div>
-</footer>
-
-</body>
-</html>
+</body></html>
